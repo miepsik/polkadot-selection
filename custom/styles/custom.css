@@ -1,7 +1,31 @@
+.step_1 .page-wrapper::before {
+    background: white;
+}
+
+.step_7 .page-wrapper::before {
+    background: white;
+}
+
 .cursor-pointer {
     cursor: pointer;
 }
 
+/* tables */
+
 .width-auto {
-    width: auto;
+    width: 100%;
 }
+
+.table-dark {
+    background: none;
+}
+
+.table-dark th, .table-dark td, .table-dark thead th {
+    border-color: gray !important;
+}
+
+.table-dark th div {
+    color: white;
+    text-align: left;
+}
+
