@@ -6,20 +6,14 @@ function select(id) {
     if (index > -1) {
       selected.splice(index, 1);
     }
-    objs = document.querySelectorAll("[data-coil='b" + id + "']");
-    objs.forEach(function (x) {
-      x.style.background = "#EFEFEF";
-    });
+    document.getElementById("b" + id).style.background = "#EFEFEF";
     return;
   }
   if (selected.length >= 7) {
     return;
   }
   selected.push(id);
-  objs = document.querySelectorAll("[data-coil='b" + id + "']");
-  objs.forEach(function (x) {
-    x.style.background = "#00FF00";
-  });
+  document.getElementById("b" + id).style.background = "#00FF00";
 }
 
 function proceed() {
@@ -29,12 +23,12 @@ function proceed() {
   $.ajax({
     type: "POST",
     url: "storeSelection.php",
-    data: { selected: selected, table: "final" },
+    data: { selected: selected, table: "selected" },
 
     success: function (obj, textstatus) {
       window.console.log(obj);
       window.console.log("red");
-      window.location.href = "step6.php";
+      window.location.href = "step4.php";
       return false;
     },
   });
