@@ -196,6 +196,3 @@ $stmt->close();
 </section>
 
 <?php include("includes/footer.php"); ?>
-
-
-btn btn-lg btn-primary btn-white
