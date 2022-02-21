@@ -270,7 +270,7 @@ $manualFirst = (bool)random_int(0, 1);
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <button class="btn btn-lg btn-primary btn-white" onclick="proceed()" class="btn btn-info" role="button">Submit</button>
+                <button class="btn btn-lg btn-primary btn-white" onclick="proceed()" class="btn btn-info" role="button">Next</button>
             </div>
         </div>
     </div>

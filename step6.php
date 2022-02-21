@@ -30,7 +30,7 @@
                 <h2 class="font-weight-bold text-white">
                 CONTINUE TO SEE YOUR REWARD INFORMATION
                 </h2>
-                <p>Thank you very much for completing the questionnaire.</p>
+                <p>Thank you very much for completing the questionnaire. Please be assured that your answers are anonymous.</p>
             </div>
         </div>
         <div class="row">
