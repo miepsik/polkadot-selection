@@ -34,6 +34,7 @@ $stmt->execute();
 $result = $stmt->get_result(); // get the mysqli result
 $proposed = $result->fetch_assoc(); // fetch data
 $stmt->close();
+$manualFirst = (bool)random_int(0, 1);
 ?>
 
 <?php $step = 5; ?>
@@ -46,6 +47,8 @@ $stmt->close();
 <!-- custom js -->
 <script type="text/javascript" src="/custom/js/customSelection3.js"></script>
 
+
+<?php if ($manualFirst): ?>
 <section class="bg-dark">
     <div class="container">
         <div class="row mb-5">
@@ -65,23 +68,27 @@ $stmt->close();
                     <tr role="row">
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="0"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>commission_percent</div>
+                            <div>Commission percent</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="1"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>self_stake</div>
+                            <div>Self stake</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="2"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>total_stake</div>
+                            <div>Total stake</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="3"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>voters</div>
+                            <div>Era points</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="4"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>era_points</div>
+                            <div>Cluster size</div>
+                        </th>
+                        <th role="columnheader" scope="col" tabindex="0" aria-colindex="5"
+                            class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
+                            <div>Voters</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="6"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
@@ -109,6 +116,9 @@ $stmt->close();
     </div>
 </section>
 
+
+<?php endif ?>
+
 <section class="bg-dark">
     <div class="container">
         <div class="row mb-5">
@@ -128,27 +138,27 @@ $stmt->close();
                     <tr role="row">
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="0"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>commission_percent</div>
+                            <div>Commission percent</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="1"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>self_stake</div>
+                            <div>Self stake</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="2"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>total_stake</div>
+                            <div>Total stake</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="3"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>voters</div>
+                            <div>Era points</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="4"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>era_points</div>
+                            <div>Cluster size</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="5"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>cluster_size</div>
+                            <div>Voters</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="6"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
@@ -175,6 +185,77 @@ $stmt->close();
         </div>
     </div>
 </section>
+
+<?php if (!$manualFirst): ?>
+    <section class="bg-dark">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col col-lg-6">
+                    <h2 class="text-white font-weight-bold">
+                        MANUAL SELECTION
+                    </h2>
+                    <p>This table is the selection from Selection A in the first stage of the study.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <table class="table b-table table-hover table-dark sortable width-auto" aria-rowcount="5" aria-busy="false"
+                           role="table"
+                           aria-colcount="6">
+                        <thead role="rowgroup">
+                        <tr role="row">
+                            <th role="columnheader" scope="col" tabindex="0" aria-colindex="0"
+                                class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
+                                <div>Commission percent</div>
+                            </th>
+                            <th role="columnheader" scope="col" tabindex="0" aria-colindex="1"
+                                class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
+                                <div>Self stake</div>
+                            </th>
+                            <th role="columnheader" scope="col" tabindex="0" aria-colindex="2"
+                                class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
+                                <div>Total stake</div>
+                            </th>
+                            <th role="columnheader" scope="col" tabindex="0" aria-colindex="3"
+                                class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
+                                <div>Era points</div>
+                            </th>
+                            <th role="columnheader" scope="col" tabindex="0" aria-colindex="4"
+                                class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
+                                <div>Cluster size</div>
+                            </th>
+                            <th role="columnheader" scope="col" tabindex="0" aria-colindex="5"
+                                class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
+                                <div>Voters</div>
+                            </th>
+                            <th role="columnheader" scope="col" tabindex="0" aria-colindex="6"
+                                class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
+                                <div>Select</div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody role="rowgroup">
+                        <?php
+                        $df = array();
+                        $i = -2;
+                        if (($handle = fopen("validators2.csv", "r")) !== FALSE) {
+                            while (($data = fgetcsv($handle, 5000, ",")) !== FALSE) {
+                                if (++$i < 0) continue;
+                                echo getRow($data, $i, $selected);
+                                $df[] = $data;
+                            }
+                            fclose($handle);
+                        }
+                        ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<?php endif ?>
 
 <section>
     <div class="container">

@@ -31,27 +31,27 @@
                     <tr role="row">
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="0"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>commission_percent</div>
+                            <div>Commission percent</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="1"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>self_stake</div>
+                            <div>Self stake</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="2"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>total_stake</div>
+                            <div>Total stake</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="3"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>voters</div>
+                            <div>Era points</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="4"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>era_points</div>
+                            <div>Cluster size</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="5"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>cluster_size</div>
+                            <div>Voters</div>
                         </th>
                         <th role="columnheader" scope="col" tabindex="0" aria-colindex="6"
                             class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
