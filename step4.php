@@ -51,7 +51,7 @@ session_start();
                 <h2 class="font-weight-bold text-white">
                 GO TO THE NEXT STEP
                 </h2>
-                <p>Thank you very much for your choices. Press “next” to go to next step of the study.</p>
+                <p>Thank you very much for your choices. After you answered the above questions, you can continue to the next part of the study.</p>
             </div>
         </div>
         <div class="row">

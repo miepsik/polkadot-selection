@@ -16,8 +16,8 @@
                     INSTRUCTIONS
                 </h2>
                 <p>
-                    Please select seven validators that match your preferences. You can click on the column names to sort. Click
-                    “next” at the bottom of the screen when you are finished.
+                    Please select <b> seven </b> validators that match your preferences. You can click on the column names to sort. Once you selected exactly seven validators, please click
+                    “next” at the bottom of the screen to continue.
                 </p>
             </div>
         </div>
@@ -95,7 +95,7 @@
                 <h2 class="font-weight-bold text-white">
                 GO TO THE NEXT STEP
                 </h2>
-                <p>Thank you very much for your choices. Press “next” to go to next step of the study.</p>
+                <p>Thank you very much for your choices. After you selected seven validators, you can continue to the next part of the study.</p>
             </div>
         </div>
         <div class="row">
