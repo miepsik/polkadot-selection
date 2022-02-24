@@ -50,9 +50,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                <input type="email" id="email" name="email" placeholder="Email">
-                <input type="text" id="polkadot" name="polkadot" placeholder="Your Polkadot Address">
+            <div class="col-12 mb-2">
+                <input type="email" id="email" name="email" placeholder="Email" class="p-3 border-0 rounded-lg col-3 mr-2">
+                <input type="text" id="address" name="polkadot address" placeholder="Your Polkadot Address" class="p-3 border-0 rounded-lg col-6">
+            </div>
+            <div class="col-12 text-primary text-small">
+                <span id="email-message" class="d-inline-block col-3 mr-2 pl-0"></span>
+                <span id="address-message" class="d-inline-block"></span>
             </div>
         </div>
     </div>
@@ -69,10 +73,11 @@
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <button class="submit btn btn-lg btn-primary btn-white">Start</button>
+                <button id="submit_step_2" class="submit btn btn-lg btn-primary btn-white" disabled>Start</button>
             </div>
         </div>
     </div>
 </section>
 
 <?php include("includes/footer.php"); ?>
+
