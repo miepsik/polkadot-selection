@@ -37,9 +37,16 @@ $stmt->close();
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2 class="font-weight-bold">This was the final recommendation of the algorithm</h2>
+                    <h2>Part 1: The Selection Process</h2>
+                    <div class="note">
+                        In this section we want to learn more about how you perceived the different stages of the
+                        selection.
+                    </div>
 
-                    <table class="table b-table table-hover table-dark sortable width-auto" aria-rowcount="5" aria-busy="false"
+                    <h3 class="font-weight-bold">This was the final recommendation of the algorithm</h3>
+
+                    <table class="table b-table table-hover table-dark sortable width-auto" aria-rowcount="5"
+                           aria-busy="false"
                            role="table"
                            aria-colcount="6">
                         <thead role="rowgroup">
@@ -63,33 +70,59 @@ $stmt->close();
                         </tbody>
                     </table>
 
-                    <h2>How well does the recommendation suit your preferences</h2>
+                    <h3>How well does the recommendation suit your preferences?</h3>
 
                     <input type="range" min="1" max="7" value="3" class="slider" id="q1">
 
 
-                    <h2>If you would have to evaluate the effort that it took for manual selection (Selection A)</h2>
+                    <h3>If you would have to evaluate the effort that it took for manual selection (Selection A)?</h3>
                     <input type="range" min="1" max="7" value="3" class="slider" id="q2">
 
 
-                    <h2>If you would have to evaluate the effort that it took for the algorithm (Selection B)</h2>
+                    <h3>If you would have to evaluate the effort that it took for the algorithm (Selection B)?</h3>
                     <input type="range" min="1" max="7" value="3" class="slider" id="q3">
 
-                    <h2>Which method would you prefer having the choice</h2>
+                    <h3>Which method would you prefer having the choice?</h3>
                     <input type="range" min="1" max="7" value="3" class="slider" id="q4">
 
-                    <h2>Why</h2>
+                    <h3>Why</h3>
                     <textarea name="comment" form="questionnaire">Enter text here...</textarea>
 
 
-                    
+                    <h2>Part 2: Your Background</h2>
+                    <div class="note">
+                        In this section we would like to learn more about your background in the crypto space.
+                    </div>
 
-                    <input type="radio" id="custom" name="fav_language" value="Custom">
-                    <label for="custom">Custom</label><br>
-                    <input type="radio" id="model" name="fav_language" value="Model">
-                    <label for="model">Model</label><br>
-                    <input type="radio" id="no" name="fav_language" value="Don't know">
-                    <label for="no">Don't know</label>
+                    <h3>Are you currently staking any DOT or KSM?</h3>
+                    <input type="radio" id="yes5" name="q5" value="Yes">
+                    <label for="yes5">Yes</label><br>
+                    <input type="radio" id="no5" name="q5" value="No">
+                    <label for="no5">No</label><br>
+
+                    <h3>IF YES: Please estimate how much of your total staked funds you hold at custodial staking
+                        services (for example exchanges)</h3>
+                    <input id="q6">
+
+                    <h3>Are you currently staking any other token than DOT or KSM?</h3>
+                    <input type="radio" id="yes5" name="q7" value="Yes">
+                    <label for="yes7">Yes</label><br>
+                    <input type="radio" id="no5" name="q7" value="No">
+                    <label for="no7">No</label><br>
+
+                    <h3>IF YES: Please estimate how much of your total staked funds you hold at custodial staking
+                        services (for example exchanges)</h3>
+                    <input id="q8">
+
+
+                    <h3>How often do you nominate validators yourself on Polkadot?</h3>
+                    <input type="radio" id="daily8" name="q8" value="Daily">
+                    <label for="daily8">Daily</label><br>
+                    <input type="radio" id="weekly8" name="q8" value="Weekly">
+                    <label for="weekly8">Weekly</label><br>
+                    <input type="radio" id="monthly8" name="q8" value="Monthly">
+                    <label for="monthly8">Monthly</label><br>
+                    
 
                 </div>
             </div>
