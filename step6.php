@@ -122,7 +122,7 @@ $stmt->close();
                     <label for="weekly8">Weekly</label><br>
                     <input type="radio" id="monthly8" name="q8" value="Monthly">
                     <label for="monthly8">Monthly</label><br>
-                    
+
 
                 </div>
             </div>
