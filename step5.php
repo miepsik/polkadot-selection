@@ -66,34 +66,7 @@ $manualFirst = (bool)random_int(0, 1);
                     aria-colcount="6">
                     <thead role="rowgroup">
                     <tr role="row">
-                        <th role="columnheader" scope="col" tabindex="0" aria-colindex="0"
-                            class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>Commission percent</div>
-                        </th>
-                        <th role="columnheader" scope="col" tabindex="0" aria-colindex="1"
-                            class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>Self stake</div>
-                        </th>
-                        <th role="columnheader" scope="col" tabindex="0" aria-colindex="2"
-                            class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>Total stake</div>
-                        </th>
-                        <th role="columnheader" scope="col" tabindex="0" aria-colindex="3"
-                            class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>Era points</div>
-                        </th>
-                        <th role="columnheader" scope="col" tabindex="0" aria-colindex="4"
-                            class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>Cluster size</div>
-                        </th>
-                        <th role="columnheader" scope="col" tabindex="0" aria-colindex="5"
-                            class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>Voters</div>
-                        </th>
-                        <th role="columnheader" scope="col" tabindex="0" aria-colindex="6"
-                            class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>Select</div>
-                        </th>
+                        <?php include("includes/headerRow.php"); ?>
                     </tr>
                     </thead>
                     <tbody role="rowgroup">
@@ -136,34 +109,7 @@ $manualFirst = (bool)random_int(0, 1);
                     aria-colcount="6">
                     <thead role="rowgroup">
                     <tr role="row">
-                        <th role="columnheader" scope="col" tabindex="0" aria-colindex="0"
-                            class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>Commission percent</div>
-                        </th>
-                        <th role="columnheader" scope="col" tabindex="0" aria-colindex="1"
-                            class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>Self stake</div>
-                        </th>
-                        <th role="columnheader" scope="col" tabindex="0" aria-colindex="2"
-                            class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>Total stake</div>
-                        </th>
-                        <th role="columnheader" scope="col" tabindex="0" aria-colindex="3"
-                            class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>Era points</div>
-                        </th>
-                        <th role="columnheader" scope="col" tabindex="0" aria-colindex="4"
-                            class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>Cluster size</div>
-                        </th>
-                        <th role="columnheader" scope="col" tabindex="0" aria-colindex="5"
-                            class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>Voters</div>
-                        </th>
-                        <th role="columnheader" scope="col" tabindex="0" aria-colindex="6"
-                            class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                            <div>Select</div>
-                        </th>
+                        <?php include("includes/headerRow.php"); ?>
                     </tr>
                     </thead>
                     <tbody role="rowgroup">
@@ -204,34 +150,7 @@ $manualFirst = (bool)random_int(0, 1);
                            aria-colcount="6">
                         <thead role="rowgroup">
                         <tr role="row">
-                            <th role="columnheader" scope="col" tabindex="0" aria-colindex="0"
-                                class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                                <div>Commission percent</div>
-                            </th>
-                            <th role="columnheader" scope="col" tabindex="0" aria-colindex="1"
-                                class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                                <div>Self stake</div>
-                            </th>
-                            <th role="columnheader" scope="col" tabindex="0" aria-colindex="2"
-                                class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                                <div>Total stake</div>
-                            </th>
-                            <th role="columnheader" scope="col" tabindex="0" aria-colindex="3"
-                                class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                                <div>Era points</div>
-                            </th>
-                            <th role="columnheader" scope="col" tabindex="0" aria-colindex="4"
-                                class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                                <div>Cluster size</div>
-                            </th>
-                            <th role="columnheader" scope="col" tabindex="0" aria-colindex="5"
-                                class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                                <div>Voters</div>
-                            </th>
-                            <th role="columnheader" scope="col" tabindex="0" aria-colindex="6"
-                                class="text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer">
-                                <div>Select</div>
-                            </th>
+                            <?php include("includes/headerRow.php"); ?>
                         </tr>
                         </thead>
                         <tbody role="rowgroup">
