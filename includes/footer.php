@@ -17,6 +17,7 @@
 <script type="text/javascript" src="/custom/js/aos.js"></script>
 <script type="text/javascript" src="/custom/js/popper.min.js"></script>
 <script type="text/javascript" src="/custom/js/bootstrap.js"></script>
+<script type="text/javascript" src="/custom/js/validate-input.js"></script>
 
 <!-- custom js -->
 <script type="text/javascript" src="/custom/js/theme-custom.js"></script>
