@@ -2,17 +2,24 @@
 session_start();
 $user = $_SESSION['user'];
 require "connect.php";
-
+$withSelect = FALSE;
 function getRow($data, $i, $a) {
     if (in_array($data[0], $a)) {
         $output = "<tr data-coil=\"{$data[0]}\" role=\"row\" aria-rowindex=\"{$i}\">";
         for ($j = 0; $j < 6; $j++) {
             $output .= "<td aria-colindex=\"{$j}\" role=\"cell\" class=\"d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell\">{$data[$j+1]}</td>";
         }
-        $output .= "<td aria-colindex=\"6\" role=\"cell\" class=\"d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell\"> <button data-coil=\"b{$data[0]}\" onclick=\"select('{$data[0]}')\">Select</button> </td></tr>";
+        $output .= "</tr>";
         return $output;
     } else
         return "";
+}
+
+function printOptions($options, $id) {
+    foreach ($options as $opt) {
+        echo "<input type=\"radio\" id=\"{$opt}{$id}\" name=\"q{$id}\" value=\"{$opt}\">
+                    <label for=\"{$opt}{$id}\">{$opt}</label><br>";
+    }
 }
 
 $db = connect();
@@ -72,21 +79,21 @@ $stmt->close();
 
                     <h3>How well does the recommendation suit your preferences?</h3>
 
-                    <input type="range" min="1" max="7" value="3" class="slider" id="q1">
+                    <input type="range" min="1" max="7" value="3" class="slider" id="q1" name="q1">
 
 
                     <h3>If you would have to evaluate the effort that it took for manual selection (Selection A)?</h3>
-                    <input type="range" min="1" max="7" value="3" class="slider" id="q2">
+                    <input type="range" min="1" max="7" value="3" class="slider" id="q2" name="q2">
 
 
                     <h3>If you would have to evaluate the effort that it took for the algorithm (Selection B)?</h3>
-                    <input type="range" min="1" max="7" value="3" class="slider" id="q3">
+                    <input type="range" min="1" max="7" value="3" class="slider" id="q3" name="q3">
 
                     <h3>Which method would you prefer having the choice?</h3>
-                    <input type="range" min="1" max="7" value="3" class="slider" id="q4">
+                    <input type="range" min="1" max="7" value="3" class="slider" id="q4" name="q4">
 
                     <h3>Why</h3>
-                    <textarea name="comment" form="questionnaire">Enter text here...</textarea>
+                    <textarea name="q5" form="questionnaire">Enter text here...</textarea>
 
 
                     <h2>Part 2: Your Background</h2>
@@ -95,34 +102,46 @@ $stmt->close();
                     </div>
 
                     <h3>Are you currently staking any DOT or KSM?</h3>
-                    <input type="radio" id="yes5" name="q5" value="Yes">
-                    <label for="yes5">Yes</label><br>
-                    <input type="radio" id="no5" name="q5" value="No">
-                    <label for="no5">No</label><br>
+                    <?php printOptions(array("Yes", "No"), 6); ?>
 
                     <h3>IF YES: Please estimate how much of your total staked funds you hold at custodial staking
                         services (for example exchanges)</h3>
-                    <input id="q6">
+                    <input id="q7">
 
                     <h3>Are you currently staking any other token than DOT or KSM?</h3>
-                    <input type="radio" id="yes5" name="q7" value="Yes">
-                    <label for="yes7">Yes</label><br>
-                    <input type="radio" id="no5" name="q7" value="No">
-                    <label for="no7">No</label><br>
+                    <?php printOptions(array("Yes", "No"), 8); ?>
 
                     <h3>IF YES: Please estimate how much of your total staked funds you hold at custodial staking
                         services (for example exchanges)</h3>
-                    <input id="q8">
+                    <input id="q9">
 
 
                     <h3>How often do you nominate validators yourself on Polkadot?</h3>
-                    <input type="radio" id="daily8" name="q8" value="Daily">
-                    <label for="daily8">Daily</label><br>
-                    <input type="radio" id="weekly8" name="q8" value="Weekly">
-                    <label for="weekly8">Weekly</label><br>
-                    <input type="radio" id="monthly8" name="q8" value="Monthly">
-                    <label for="monthly8">Monthly</label><br>
+                    <?php printOptions(array("Daily", "Weekly", "Monthly", "Once per several months", "Once per year", "Never"), 10); ?>
 
+                    <h3>How often do you open polkadot.js/apps?</h3>
+                    <?php printOptions(array("Daily", "Weekly", "Monthly", "Once per several months", "Once per year", "Never"), 11); ?>
+
+                    <h3>How do you rate the current staking experience on Polkadot?</h3>
+                    <?php printOptions(array("Very good", "Good", "Not so good", "Very bad"), 12); ?>
+
+                    <h3>How do you rate the current staking experience on other networks?</h3>
+                    <?php printOptions(array("Very good", "Good", "Not so good", "Very bad"), 13); ?>
+
+                    <h3>How well do you think you understand Polkadot?</h3>
+                    <?php printOptions(array("Very well", "To some extend", "Not very well", "Not at all"), 14); ?>
+
+                    <h3>How long have you held crypto-currencies in general?</h3>
+                    <?php printOptions(array("Less than 1 month", "Between 1 to 6 months", "Between 6 to 12 months",
+                        "Between 1-2 years", "Between 2-3 years", "More than 3 years"), 15); ?>
+
+                    <h2>Part 3: Your Feedback</h2>
+
+                    <h3>Do you have any ideas how to further improve the staking experience on Polkadot?</h3>
+                    <textarea name="q16" form="questionnaire">Enter text here...</textarea>
+
+                    <h3>Do you have any comments with regard to this study?</h3>
+                    <textarea name="q17" form="questionnaire">Enter text here...</textarea>
 
                 </div>
             </div>

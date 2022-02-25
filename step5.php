@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 session_start();
 
 $user = $_SESSION['user'];
+$withSelect = TRUE;
 require "connect.php";
 
 function getRow($data, $i, $a) {
