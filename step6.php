@@ -2,6 +2,7 @@
 session_start();
 $user = $_SESSION['user'];
 require "connect.php";
+require "includes/headerRow.php";
 $withSelect = FALSE;
 function getRow($data, $i, $a) {
     if (in_array($data[0], $a)) {
@@ -58,7 +59,7 @@ $stmt->close();
                            aria-colcount="6">
                         <thead role="rowgroup">
                         <tr role="row">
-                            <?php include("includes/headerRow.php"); ?>
+                            <?php printHeaders(getHeaders()) ?>
                         </tr>
                         </thead>
                         <tbody role="rowgroup">

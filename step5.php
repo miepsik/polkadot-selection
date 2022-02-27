@@ -8,10 +8,21 @@ session_start();
 $user = $_SESSION['user'];
 $withSelect = TRUE;
 require "connect.php";
+require "includes/headerRow.php";
 
-function getRow($data, $i, $a) {
-    if (in_array($data[0], $a)) {
+function getRow($data, $i, $a, $b) {
+    $ina = in_array($data[0], $a);
+    $inb = in_array($data[0], $b);
+    if ($ina || $inb) {
         $output = "<tr data-coil=\"{$data[0]}\" role=\"row\" aria-rowindex=\"{$i}\">";
+        $type = "";
+        if ($ina) {
+            $type .= "A";
+        }
+        if ($inb) {
+            $type .= "B";
+        }
+        $output .= "<td aria-colindex=\"{-1}\" role=\"cell\" class=\"d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell\">{$type}</td>";
         for ($j = 0; $j < 6; $j++) {
             $output .= "<td aria-colindex=\"{$j}\" role=\"cell\" class=\"d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell\">{$data[$j+1]}</td>";
         }
@@ -48,8 +59,6 @@ $manualFirst = (bool)random_int(0, 1);
 <!-- custom js -->
 <script type="text/javascript" src="/custom/js/customSelection3.js"></script>
 
-
-<?php if ($manualFirst): ?>
 <section class="bg-dark">
     <div class="container">
         <div class="row mb-5">
@@ -67,115 +76,34 @@ $manualFirst = (bool)random_int(0, 1);
                     aria-colcount="6">
                     <thead role="rowgroup">
                     <tr role="row">
-                        <?php include("includes/headerRow.php"); ?>
-                    </tr>
-                    </thead>
-                    <tbody role="rowgroup">
-                    <?php
-                    $df = array();
-                    $i = -2;
-                    if (($handle = fopen("validators2.csv", "r")) !== FALSE) {
-                        while (($data = fgetcsv($handle, 5000, ",")) !== FALSE) {
-                            if (++$i < 0) continue;
-                            echo getRow($data, $i, $selected);
-                            $df[] = $data;
-                        }
-                        fclose($handle);
-                    }
-                    ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<?php endif ?>
-
-<section class="bg-dark">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col col-lg-6">
-                <h2 class="text-white font-weight-bold">
-                ALGORITHM SELECTION
-                </h2>
-                <p>This table is the recommendation of our algorithm.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6">
-                <table class="table b-table table-hover table-dark sortable width-auto" aria-rowcount="5" aria-busy="false"
-                    role="table"
-                    aria-colcount="6">
-                    <thead role="rowgroup">
-                    <tr role="row">
-                        <?php include("includes/headerRow.php"); ?>
-                    </tr>
-                    </thead>
-                    <tbody role="rowgroup">
-                    <?php
-                    $df = array();
-                    $i = -2;
-                    if (($handle = fopen("validators2.csv", "r")) !== FALSE) {
-                        while (($data = fgetcsv($handle, 5000, ",")) !== FALSE) {
-                            if (++$i < 0) continue;
-                            echo getRow($data, $i, $proposed);
-                            $df[] = $data;
-                        }
-                        fclose($handle);
-                    }
-                    ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</section>
-
-<?php if (!$manualFirst): ?>
-    <section class="bg-dark">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col col-lg-6">
-                    <h2 class="text-white font-weight-bold">
-                        MANUAL SELECTION
-                    </h2>
-                    <p>This table is the selection from Selection A in the first stage of the study.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6">
-                    <table class="table b-table table-hover table-dark sortable width-auto" aria-rowcount="5" aria-busy="false"
-                           role="table"
-                           aria-colcount="6">
-                        <thead role="rowgroup">
-                        <tr role="row">
-                            <?php include("includes/headerRow.php"); ?>
-                        </tr>
-                        </thead>
-                        <tbody role="rowgroup">
                         <?php
-                        $df = array();
-                        $i = -2;
-                        if (($handle = fopen("validators2.csv", "r")) !== FALSE) {
-                            while (($data = fgetcsv($handle, 5000, ",")) !== FALSE) {
-                                if (++$i < 0) continue;
-                                echo getRow($data, $i, $selected);
-                                $df[] = $data;
-                            }
-                            fclose($handle);
-                        }
+                            $columns = getHeaders();
+                            array_unshift($columns , 'Selection');
+                            $columns[] = 'Select';
+                            printHeaders($columns)
+
                         ?>
-                        </tbody>
-                    </table>
-                </div>
+                    </tr>
+                    </thead>
+                    <tbody role="rowgroup">
+                    <?php
+                    $df = array();
+                    $i = -2;
+                    if (($handle = fopen("validators2.csv", "r")) !== FALSE) {
+                        while (($data = fgetcsv($handle, 5000, ",")) !== FALSE) {
+                            if (++$i < 0) continue;
+                            echo getRow($data, $i, $selected, $proposed);
+                            $df[] = $data;
+                        }
+                        fclose($handle);
+                    }
+                    ?>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </section>
-
-
-<?php endif ?>
+    </div>
+</section>
 
 <section>
     <div class="container">

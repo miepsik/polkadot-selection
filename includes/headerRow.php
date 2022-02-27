@@ -1,8 +1,18 @@
 <?php
-if (($handle = fopen("validators2.csv", "r")) !== FALSE) {
-    $data = fgetcsv($handle, 5000, ",");
+
+function getHeaders() {
+    if (($handle = fopen("validators2.csv", "r")) !== FALSE) {
+        $headers = fgetcsv($handle, 5000, ",");
+        fclose($handle);
+        array_splice($headers, 0, 1);
+        return $headers;
+    }
+    return array();
+}
+
+function printHeaders($headers) {
     $i = 0;
-    foreach ($data as $column) {
+    foreach ($headers as $column) {
         if (strpos($column, "_") !== FALSE) {
             continue;
         }
@@ -11,12 +21,5 @@ if (($handle = fopen("validators2.csv", "r")) !== FALSE) {
     <div>{$column}</div>
 </th>";
     }
-    if ($withSelect) {
-        echo "<th role=\"columnheader\" scope=\"col\" tabindex=\"0\" aria-colindex=\"6\"
-    class=\"text-center d-none d-sm-none d-md-none d-lg-table-cell d-xl-table-cell cursor-pointer\">
-    <div>Select</div>
-</th>";
-    }
 
-    fclose($handle);
 }
