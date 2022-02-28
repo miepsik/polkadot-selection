@@ -1,7 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: miebs
- * Date: 2/27/22
- * Time: 12:49 PM
- */
+function checkFlow($step, $history) {
+    $i = 0;
+    while ($history[$i] > 0) $i++;
+    if ($i < $step) {
+        header("Location: step" . ($i+1) . ".php");
+        die();
+
+    }
+}

@@ -107,14 +107,14 @@ $stmt->close();
 
                     <h3>IF YES: Please estimate how much of your total staked funds you hold at custodial staking
                         services (for example exchanges)</h3>
-                    <input id="q7">
+                    <input type="number" max="100" min="0" id="q7">
 
                     <h3>Are you currently staking any other token than DOT or KSM?</h3>
                     <?php printOptions(array("Yes", "No"), 8); ?>
 
                     <h3>IF YES: Please estimate how much of your total staked funds you hold at custodial staking
                         services (for example exchanges)</h3>
-                    <input id="q9">
+                    <input type="number" max="100" min="0" id="q9">
 
 
                     <h3>How often do you nominate validators yourself on Polkadot?</h3>
