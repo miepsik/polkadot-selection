@@ -105,14 +105,14 @@ $stmt->close();
                     <h3>Are you currently staking any DOT or KSM?</h3>
                     <?php printOptions(array("Yes", "No"), 6); ?>
 
-                    <h3>IF YES: Please estimate how much of your total staked funds you hold at custodial staking
+                    <h3>IF YES: Please estimate how much of your total staked funds (in percent) you hold at custodial staking
                         services (for example exchanges)</h3>
                     <input id="q7">
 
                     <h3>Are you currently staking any other token than DOT or KSM?</h3>
                     <?php printOptions(array("Yes", "No"), 8); ?>
 
-                    <h3>IF YES: Please estimate how much of your total staked funds you hold at custodial staking
+                    <h3>IF YES: Please estimate how much of your total staked funds (in percent) you hold at custodial staking
                         services (for example exchanges)</h3>
                     <input id="q9">
 
@@ -120,7 +120,7 @@ $stmt->close();
                     <h3>How often do you nominate validators yourself on Polkadot?</h3>
                     <?php printOptions(array("Daily", "Weekly", "Monthly", "Once per several months", "Once per year", "Never"), 10); ?>
 
-                    <h3>How often do you open polkadot.js/apps?</h3>
+                    <h3>How often do you open polkadot.js.org/apps?</h3>
                     <?php printOptions(array("Daily", "Weekly", "Monthly", "Once per several months", "Once per year", "Never"), 11); ?>
 
                     <h3>How do you rate the current staking experience on Polkadot?</h3>
