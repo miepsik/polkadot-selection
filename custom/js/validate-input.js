@@ -5,7 +5,7 @@ const validateEmail = (email) => {
 };
 
 const validatePolkadotAddress = (address) => {
-  return address.match(/^(^1)(\w{47}$)/);
+  return address.match(/^(^1)(\w{46}$)/);
 };
 
 const enableSubmitStep2 = () => {
