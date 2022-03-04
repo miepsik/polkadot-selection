@@ -1,8 +1,9 @@
 <?php
 session_start();
 $user = $_SESSION['user'];
-require "connect.php";
-require "includes/headerRow.php";
+$placebo = $_SESSION['placebo'];
+require_once "connect.php";
+require_once "includes/headerRow.php";
 $withSelect = FALSE;
 function getRow($data, $i, $a) {
     if (in_array($data[0], $a)) {
@@ -39,9 +40,11 @@ $stmt->close();
 <?php $hero_title = 'Questionnaire'; ?>
 <?php $hero_desc = 'In this part, we would like to ask you a few more questions. Please note, that your answers are anonymous and we do not try to link them to your identity.'; ?>
 <?php include("includes/hero.php"); ?>
+<?php require_once "includes/checkpoint.php"; ?>
+<?php checkFlow($step, $_SESSION['user'])?>
+<form id="questionnaire" action="checkpoint6.php" type="post">
 
 <section class="bg-white">
-    <form id="questionnaire">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -80,18 +83,19 @@ $stmt->close();
 
                     <h3>How well does the recommendation suit your preferences?</h3>
 
-                    <input type="range" min="1" max="7" value="3" class="slider" id="q1" name="q1">
+                    <?php printOptions(array("Very well", "To some extend", "Not very well", "Not at all"), 1); ?>
 
 
                     <h3>If you would have to evaluate the effort that it took for manual selection (Selection A)?</h3>
-                    <input type="range" min="1" max="7" value="3" class="slider" id="q2" name="q2">
+                    <?php printOptions(array("Very easy", "Easy", "Medium", "Hard", "Very hard"), 2); ?>
 
-
+                    <?php if (true):?>
                     <h3>If you would have to evaluate the effort that it took for the algorithm (Selection B)?</h3>
-                    <input type="range" min="1" max="7" value="3" class="slider" id="q3" name="q3">
+                    <?php printOptions(array("Very easy", "Easy", "Medium", "Hard", "Very hard"), 3); ?>
 
+                    <?php endif;?>
                     <h3>Which method would you prefer having the choice?</h3>
-                    <input type="range" min="1" max="7" value="3" class="slider" id="q4" name="q4">
+                    <?php printOptions(array("Manual", "Rather manual", "I don't know", "Rather algorithm", "Algorithm"), 4); ?>
 
                     <h3>Why</h3>
                     <textarea name="q5" form="questionnaire">Enter text here...</textarea>
@@ -147,7 +151,6 @@ $stmt->close();
                 </div>
             </div>
         </div>
-    </form>
 </section>
 
 <section>
@@ -163,10 +166,11 @@ $stmt->close();
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <a href="step7.php" class="btn btn-lg btn-primary btn-white" role="button">Next</a>
+                <button type="submit" class="btn btn-lg btn-primary btn-white" formmethod="post" formaction="checkpoint6.php">Next</button>
             </div>
         </div>
     </div>
 </section>
+</form>
 
 <?php include("includes/footer.php"); ?>

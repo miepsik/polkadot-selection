@@ -1,9 +1,16 @@
 <?php
 session_start();
 ?>
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+ini_set('display_errors', 1);
+?>
 
 <?php $step = 4; ?>
 <?php include("includes/header.php"); ?>
+<?php require_once "includes/checkpoint.php"; ?>
+<?php checkFlow($step, $_SESSION['user'])?>
 
 <!-- custom js -->
 <script type="text/javascript" src="/custom/js/customSelection2.js"></script>
@@ -56,7 +63,7 @@ session_start();
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <a href="step5.php" class="btn btn-lg btn-primary btn-white" role="button">Next</a>
+                <a href="checkpoint4.php" class="btn btn-lg btn-primary btn-white" role="button">Next</a>
             </div>
         </div>
     </div>

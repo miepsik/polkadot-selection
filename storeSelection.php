@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 $user = $_SESSION['user'];
 print_r($_SESSION);
 
-require "connect.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/connect.php";
 
 
 $s = $_POST['selected'];

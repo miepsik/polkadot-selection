@@ -1,7 +1,10 @@
+<?php session_start(); ?>
 <?php $step = 7; ?>
 <?php include("includes/header.php"); ?>
 
 <?php $date = strtotime("+30 day"); ?>
+<?php require_once "includes/checkpoint.php"; ?>
+<?php checkFlow($step, $_SESSION['user'])?>
 
 <section class="bg-white">
     <div class="container">

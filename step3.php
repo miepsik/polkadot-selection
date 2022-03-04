@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php $step = 3; ?>
 <?php include("includes/header.php"); ?>
 
@@ -9,6 +10,8 @@
 <?php $hero_desc = 'On this page, we show you a list of the current validators (anonymized) and would like you to select seven validators that match your preferences. As mentioned before, there is no right or wrong, we want you to select the validators as you would normally do.'; ?>
 <?php include("includes/hero.php"); ?>
 <?php require 'includes/headerRow.php'; ?>
+<?php require_once "includes/checkpoint.php"; ?>
+<?php checkFlow($step, $_SESSION['user'])?>
 
 <section class="bg-dark">
     <div class="container">

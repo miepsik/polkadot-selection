@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require "connect.php";
+require_once "connect.php";
 
 $length = 10;    
 $sd = substr(str_shuffle('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'),1,$length);

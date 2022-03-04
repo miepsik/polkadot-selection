@@ -7,8 +7,9 @@ session_start();
 
 $user = $_SESSION['user'];
 $withSelect = TRUE;
-require "connect.php";
-require "includes/headerRow.php";
+require_once "connect.php";
+require_once "includes/headerRow.php";
+
 
 function getRow($data, $i, $a, $b) {
     $ina = in_array($data[0], $a);
@@ -55,6 +56,8 @@ $manualFirst = (bool)random_int(0, 1);
 <?php $hero_title = 'Selection C'; ?>
 <?php $hero_desc = 'In this stage, we would like to ask you to make a final choice of your preferred validators. Pease select 7 validators in total. You are free to select from both tables. In the case that one validator is present in both tables, both are highlighted at once.'; ?>
 <?php include("includes/hero.php"); ?>
+<?php require_once "includes/checkpoint.php"; ?>
+<?php checkFlow($step, $_SESSION['user'])?>
 
 <!-- custom js -->
 <script type="text/javascript" src="/custom/js/customSelection3.js"></script>

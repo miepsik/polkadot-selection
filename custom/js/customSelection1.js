@@ -28,7 +28,7 @@ function proceed() {
     success: function (obj, textstatus) {
       window.console.log(obj);
       window.console.log("red");
-      window.location.href = "step4.php";
+      window.location.href = "checkpoint3.php";
       return false;
     },
   });

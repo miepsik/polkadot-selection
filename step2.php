@@ -1,9 +1,20 @@
+<?php session_start()?>
+<?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+ini_set('display_errors', 1);
+
+?>
 <?php $step = 2; ?>
 <?php include("includes/header.php"); ?>
 
 <?php $hero_title = 'Validator <br>Selection Study'; ?>
 <?php $hero_desc = 'Welcome and thank you very much for taking the time to participate in this study. '; ?>
 <?php include("includes/hero.php"); ?>
+<?php require_once "includes/checkpoint.php"; ?>
+<?php checkFlow($step, $_SESSION['user'])?>
+
 
 <section class="bg-white">
     <div class="container">
@@ -35,6 +46,7 @@
     </div>
 </section>
 
+<form action="checkpoint2.php" method="post">
 <section class="bg-dark">
     <div class="container">
         <div class="row mb-5">
@@ -73,11 +85,12 @@
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <button id="submit_step_2" class="submit btn btn-lg btn-primary btn-white" disabled>Start</button>
+                <button type="submit" id="submit_step_2" formmethod="post" formaction="checkpoint2.php" class="submit btn btn-lg btn-primary btn-white" disabled>Start</button>
             </div>
         </div>
     </div>
 </section>
+</form>
 
 <?php include("includes/footer.php"); ?>
 
