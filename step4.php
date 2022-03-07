@@ -18,7 +18,6 @@ ini_set('display_errors', 1);
 <!-- custom css -->
 <style>
     /* hide data dump */
-    table.dataframe {display: none;}
     #placeholder > #a1 { display: none; }
     #placeholder > #b1 { display: none; }
 </style>

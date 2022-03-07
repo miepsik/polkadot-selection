@@ -51,15 +51,17 @@ if ($stmt->num_rows > 0) {
 }
 $stmt->close();
 
-$stmt = $db->prepare("SELECT * from users WHERE ukey = ? and finished < 6 and date_add(udate, INTERVAL 30 minute) > CURRENT_TIMESTAMP ;");
+$stmt = $db->prepare("SELECT TIMESTAMPDIFF(MINUTE,udate,NOW()) from users WHERE ukey = ? and finished < 6 and date_add(udate, INTERVAL 30 minute) > CURRENT_TIMESTAMP ;");
 $stmt->bind_param("s", $code);
 $stmt->execute();
+$stmt->bind_result($date);
 $stmt->store_result();
-
+$stmt->fetch();
+$dif = 31 - $date;
 if ($stmt->num_rows > 0) {
     $stmt->close();
     $db->close();
-    header("Location: step1.php?msg=Code%20already%20used%20Please%20wait%2030%20minutes%20till%20last%20action");
+    header("Location: step1.php?msg=Code%20already%20used.%20Please%20wait%20" . $dif . "%20minutes%20to%20login%20again");
     die();
 }
 $stmt->close();
