@@ -54,7 +54,7 @@ $manualFirst = (bool)random_int(0, 1);
 <?php include("includes/header.php"); ?>
 
 <?php $hero_title = 'Final Selection'; ?>
-<?php $hero_desc = 'In this stage, we would like to ask you to make a final choice of your preferred validators. Be aware that your participation reward will be staked with those validators. Pease select 7 validators in total.'; ?>
+<?php $hero_desc = 'In this stage, we would like to ask you to make a final choice of your preferred validators. Be aware that your participation reward will be staked with those validators, before you receive it. Pease select 7 validators in total.'; ?>
 <?php include("includes/hero.php"); ?>
 <?php require_once "includes/checkpoint.php"; ?>
 <?php checkFlow($step, $_SESSION['user'])?>
@@ -66,7 +66,7 @@ $manualFirst = (bool)random_int(0, 1);
     <div class="container">
         <div class="row mb-5">
             <div class="col col-lg-6">
-                <p>This table lists all validators from the Selection A (your manual selection) and the Selection B (algorithm recommendation). The column "Selection" indicates whether validators are from your manual selection (Selection A) or whether they are from the algorithm recommendation (Selection B). In the case that a validator is in both selections, it is marked as "AB".</p>
+                <p>This table lists all validators from the Selection A (your manual selection) and the Selection B (algorithm recommendation). The column "Selection" indicates from which part of the study they were selected. In the case that a validator is in both selections, it is marked as "AB".</p>
             </div>
         </div>
         <div class="row">
