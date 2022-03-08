@@ -15,7 +15,16 @@ ini_set('display_errors', 1);
 <?php require_once "includes/checkpoint.php"; ?>
 <?php checkFlow($step, $_SESSION['user'])?>
 
+<?php if (isset($_GET['msg'])): ?>
 
+
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <?php echo $_GET['msg']; ?>
+    </div>
+<?php endif; ?>
+
+<form action="checkpoint2.php" method="post">
 <section class="bg-white">
     <div class="container">
         <div class="row mb-5">
@@ -41,12 +50,12 @@ ini_set('display_errors', 1);
 
             <p>If you have any questions, contact <a href="mailto:experiments@web3.foundation" class="font-weight-bold text-underline" target="_blank">experiments@web3.foundation.</a></p>
 
-            <p class="note">By clicking “start” below, you give Web 3.0 Technologies Foundation ("W3F"), as Controller, your consent to process your Personal Data exclusively for the purpose of being able to make you participate in the study and send you a debriefing e-mail, in accordance with Section III., let. B (1) (Legal basis of processing) of W3F <a href="https://web3.foundation/privacy-and-cookies/" class="font-weight-bold text-underline" target="_blank">Privacy Policy</a>.</p>
+            <input type="checkbox" required name="agree" id="agree" value="Yes"> <p class="note">I agree to give Web 3.0 Technologies Foundation ("W3F"), as Controller, my consent to process my Personal Data exclusively for the purpose of being able to make me participate in the study and send me a debriefing e-mail, in accordance with Section III., let. B (1) (Legal basis of processing) of W3F <a href="https://web3.foundation/privacy-and-cookies/" class="font-weight-bold text-underline" target="_blank">Privacy Policy</a>.</p>
         </div>
     </div>
 </section>
 
-<form action="checkpoint2.php" method="post">
+
 <section class="bg-dark">
     <div class="container">
         <div class="row mb-5">

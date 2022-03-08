@@ -12,6 +12,31 @@ print_r($_POST);
 $user = $_SESSION['user'];
 $polka = $_POST['polkadot_address'];
 $email = $_POST['email'];
+$agree = $_POST['agree'];
+
+if ($agree !== "Yes") {
+    session_destroy();
+    $stmt->close();
+    $db->close();
+    header("Location: step2.php?msg=Accept%20conditions");
+    die();
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    session_destroy();
+    $stmt->close();
+    $db->close();
+    header("Location: step2.php?msg=Wrong%20email");
+    die();
+}
+
+if ($polka[0] != "1" || strlen($polka) != 47) {
+    session_destroy();
+    $stmt->close();
+    $db->close();
+    header("Location: step2.php?msg=Wrong%20polkadot%20address");
+    die();
+}
 
 $db = connect();
 $stmt = $db->prepare("UPDATE users SET email=?, polkadot=? where ukey=?;");
