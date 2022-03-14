@@ -10,8 +10,11 @@
 <?php $hero_desc = 'On this page, we show you a list of the current validators (anonymized) and would like you to select seven validators that match your preferences. As mentioned before, there is no right or wrong, we want you to select the validators as you would normally do.'; ?>
 <?php include("includes/hero.php"); ?>
 <?php require 'includes/headerRow.php'; ?>
-<?php require_once "includes/checkpoint.php"; ?>
-<?php checkFlow($step, $_SESSION['user'])?>
+
+<?php 
+//require_once "includes/checkpoint.php"; ?>
+<?php 
+//checkFlow($step, $_SESSION['user'])?>
 
 <section class="bg-dark">
     <div class="container">
@@ -126,7 +129,7 @@
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <button class="btn btn-lg btn-primary btn-white" onclick="proceed();">Next</button>
+                <button id="submit_step_3" class="btn btn-lg btn-primary btn-white" onclick="proceed();" disabled>Next</button>
             </div>
         </div>
     </div>

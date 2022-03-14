@@ -22,4 +22,8 @@
 
 <div class="header-bg"></div>
 
+<div class="device-info">
+    <p>To be used only with devices with resolution 1000px+</p>
+</div>
+
 <main class="page-wrapper" style="min-height: calc(100vh - 66px - 165px);">

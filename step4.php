@@ -9,8 +9,10 @@ ini_set('display_errors', 1);
 
 <?php $step = 4; ?>
 <?php include("includes/header.php"); ?>
-<?php require_once "includes/checkpoint.php"; ?>
-<?php checkFlow($step, $_SESSION['user'])?>
+<?php 
+//require_once "includes/checkpoint.php"; ?>
+<?php 
+//checkFlow($step, $_SESSION['user'])?>
 
 <!-- custom js -->
 <script type="text/javascript" src="/custom/js/customSelection2.js"></script>

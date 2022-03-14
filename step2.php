@@ -12,8 +12,11 @@ ini_set('display_errors', 1);
 <?php $hero_title = 'Validator <br>Selection Study'; ?>
 <?php $hero_desc = 'Welcome and thank you very much for taking the time to participate in this study. '; ?>
 <?php include("includes/hero.php"); ?>
-<?php require_once "includes/checkpoint.php"; ?>
-<?php checkFlow($step, $_SESSION['user']) ?>
+
+<?php 
+// require_once "includes/checkpoint.php"; ?>
+<?php
+// checkFlow($step, $_SESSION['user']) ?>
 
 <?php if (isset($_GET['msg'])): ?>
 

@@ -6,14 +6,18 @@ function select(id) {
     if (index > -1) {
       selected.splice(index, 1);
     }
-    document.getElementById("b" + id).style.background = "#EFEFEF";
+    document.getElementById("b" + id).classList.remove("selected");
+    enableSubmitStep3();
     return;
   }
+
   if (selected.length >= 7) {
     return;
   }
+
   selected.push(id);
-  document.getElementById("b" + id).style.background = "#00FF00";
+  document.getElementById("b" + id).classList.add("selected");
+  enableSubmitStep3();
 }
 
 function proceed() {
@@ -33,3 +37,15 @@ function proceed() {
     },
   });
 }
+
+const enableSubmitStep3 = () => {
+  const $button = $("#submit_step_3");
+
+  if (selected.length === 7) {
+    $button.prop("disabled", false);
+    $("table button:not(.selected)").prop("disabled", true);
+  } else {
+    $button.prop("disabled", true);
+    $("table button:not(.selected)").prop("disabled", false);
+  }
+};

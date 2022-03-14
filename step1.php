@@ -28,16 +28,16 @@
         <div class="row">
             <div class="col">
                 <form action="checkpoint1.php" method="post">
-                    <input id="code" name="code" value="Code">
-                    <input type="submit" value="Submit">
+                    <input id="code" name="code" placeholder="Code" class="p-3 border-0 rounded-lg col-3 mr-2 bg-light">
+                    <input type="submit" value="Submit" class="p-3 border-0 rounded-lg mr-2 bg-black text-white cursor-pointer">
                 </form>
             </div>
         </div>
     </div>
 </section>
 
-<div class="fixed-bottom alert alert-info">
-    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+<div class="cookie-alert fixed-bottom alert alert-info bg-gradient">
+    <span class="closebtn cursor-pointer" onclick="this.parentElement.style.display='none';">&times;</span>
     We only use strictly necessary cookies
     for the system features to verify if the user is logged in and has access to the
     different sections of the software. By closing this notice or continuing to explore
