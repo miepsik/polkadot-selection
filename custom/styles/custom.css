@@ -4,17 +4,20 @@
     background: #e6007a !important;
 }
 
-.btn-primary.btn-white[disabled] {
+.btn-primary.btn-white[disabled], a.disabled {
     background: none !important;
     color: white !important;
-    opacity: 0.5;
+    pointer-events: none;
+    cursor: default !important;
+    opacity: 0.25 !important;
 }
 
-.btn-primary.btn-white[disabled]:hover {
+.btn-primary.btn-white[disabled]:hover, a.disabled:hover {
     color: white !important;
     scale: 0 !important;
     transform: none;
 }
+
 
 /* layout */
 
@@ -82,6 +85,7 @@
 
 .table-dark th, .table-dark td, .table-dark thead th {
     border-color: gray !important;
+    vertical-align: middle;
 }
 
 .table-dark th div {

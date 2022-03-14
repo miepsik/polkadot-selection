@@ -36,7 +36,7 @@ ini_set('display_errors', 1);
                 INSTRUCTIONS
                 </h2>
                 <p>In the following, we present you a choice between two validators and ask you to select which of the two you prefer. We ask you to answer five of those pairwise comparisons.</p>
-                <p>SELECTION <span id="counter">1</span>/5</p>
+                <p class="font-weight-bold">SELECTION <span id="counter">1</span>/5</p>
             </div>
         </div>
         <div class="row">
@@ -64,7 +64,7 @@ ini_set('display_errors', 1);
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <a href="checkpoint4.php" class="btn btn-lg btn-primary btn-white" role="button">Next</a>
+                <a id="submit_step_4" href="checkpoint4.php" class="btn btn-lg btn-primary btn-white disabled" role="button">Next</a>
             </div>
         </div>
     </div>
