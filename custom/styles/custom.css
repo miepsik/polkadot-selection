@@ -22,7 +22,7 @@
 /* layout */
 
 .header {
-    position: fixed;
+    position: absolute;
     z-index: 1001;
 }
 
@@ -147,6 +147,58 @@
     color: white;
     cursor: default;
     opacity: 0.2;
+}
+
+/* table headers & sortable */
+
+
+/* hide select header */
+
+.row th[role="columnheader"]:last-of-type {
+    pointer-events: none;
+}
+
+.row th[role="columnheader"]:last-of-type div {
+    display: none !important;
+}
+
+/* ^^ hide select header */
+
+.sortable table {
+    position: relative;
+    border-collapse: collapse;
+}
+
+.sortable thead {
+    position: sticky;
+    background: #172026;
+    top: 0;
+    border-bottom: solid 2px gray;
+}
+
+.sortable th[role="columnheader"] {
+    border-top: 0;
+    position: relative;
+}
+.sortable th[role="columnheader"] div {
+    /* color: gray; */
+}
+
+.sortable th[role="columnheader"]:hover div {
+    /* color: white; */
+}
+
+.sortable th[role="columnheader"].sorttable_sorted div,
+.sortable th[role="columnheader"].sorttable_sorted_reverse div {
+    color: white;
+}
+
+th[role="columnheader"] #sorttable_sortfwdind,
+th[role="columnheader"] #sorttable_sortrevind {
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #e6007a;
 }
 
 /* tooltip */

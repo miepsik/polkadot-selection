@@ -1,15 +1,6 @@
 <?php $step = 1; ?>
 <?php include("includes/header.php"); ?>
 
-<?php if (isset($_GET['msg'])): ?>
-
-
-    <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <?php echo $_GET['msg']; ?>
-    </div>
-<?php endif; ?>
-
 <section class="bg-white">
     <div class="container">
         <div class="row mb-5">
@@ -33,11 +24,17 @@
                 </form>
             </div>
         </div>
+        <div class="alert mt-4">
+            <div class="text-primary">
+                <?php if (isset($_GET['msg'])): ?>
+                    <?php echo $_GET['msg']; ?>
+                <?php endif; ?>
+            </div>
+        </div>
     </div>
 </section>
 
 <div class="cookie-alert fixed-bottom alert alert-info bg-gradient">
-    <span class="closebtn cursor-pointer" onclick="this.parentElement.style.display='none';">&times;</span>
     We only use strictly necessary cookies
     for the system features to verify if the user is logged in and has access to the
     different sections of the software. By closing this notice or continuing to explore

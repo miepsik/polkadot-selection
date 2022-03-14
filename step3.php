@@ -4,6 +4,7 @@
 
 <!-- custom js -->
 <script type="text/javascript" src="/custom/js/customSelection1.js"></script>
+<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 
 <?php $hero_title = 'Selection A'; ?>
 <?php $withSelect = TRUE; ?>
