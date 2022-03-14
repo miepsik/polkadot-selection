@@ -14,9 +14,9 @@ ini_set('display_errors', 1);
 <?php include("includes/hero.php"); ?>
 
 <?php 
-// require_once "includes/checkpoint.php"; ?>
+require_once "includes/checkpoint.php"; ?>
 <?php
-// checkFlow($step, $_SESSION['user']) ?>
+checkFlow($step, $_SESSION['user']) ?>
 
 <?php if (isset($_GET['msg'])): ?>
 
