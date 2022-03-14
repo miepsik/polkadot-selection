@@ -78,13 +78,12 @@ ini_set('display_errors', 1);
                                                              class="font-weight-bold text-underline" target="_blank">experiments@web3.foundation.</a>
                     </p>
 
-                    <input type="checkbox" required name="agree" id="agree" value="Yes">
-                    <p class="note">I agree to give Web 3.0 Technologies Foundation ("W3F"), as Controller, my consent
-                        to process my Personal Data exclusively for the purpose of being able to make me participate in
-                        the study and send me a debriefing e-mail, in accordance with Section III., let. B (1) (Legal
-                        basis of processing) of W3F <a href="https://web3.foundation/privacy-and-cookies/"
-                                                       class="font-weight-bold text-underline" target="_blank">Privacy
-                            Policy</a>.</p>
+                    <div class="rounded-lg p-4 mt-5 bg-gradient">
+                        <label class="cursor-pointer d-flex align-items-center justify-content-start">
+                            <input type="checkbox" required name="agree" id="agree" value="Yes" class="cursor-pointer">
+                            <span class="px-4 text-white">I agree to give Web 3.0 Technologies Foundation ("W3F"), as Controller, my consent to process my Personal Data exclusively for the purpose of being able to make me participate in the study and send me a debriefing e-mail, in accordance with Section III., let. B (1) (Legal basis of processing) of W3F <a href="https://web3.foundation/privacy-and-cookies/" class="font-weight-bold text-underline" target="_blank">Privacy Policy</a>.</span>
+                        </label>
+                    </div>
                 </div>
             </div>
     </section>
