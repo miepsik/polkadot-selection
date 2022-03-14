@@ -18,7 +18,7 @@ function select(id) {
   selected.push(id);
   objs = document.querySelectorAll("[data-coil='b" + id + "']");
   objs.forEach(function (x) {
-    x.style.background = "#00FF00";
+    x.style.background = "#e6007a";
   });
 }
 

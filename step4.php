@@ -9,8 +9,10 @@ ini_set('display_errors', 1);
 
 <?php $step = 4; ?>
 <?php include("includes/header.php"); ?>
-<?php require_once "includes/checkpoint.php"; ?>
-<?php checkFlow($step, $_SESSION['user'])?>
+<?php 
+require_once "includes/checkpoint.php"; ?>
+<?php 
+checkFlow($step, $_SESSION['user'])?>
 
 <!-- custom js -->
 <script type="text/javascript" src="/custom/js/customSelection2.js"></script>
@@ -34,7 +36,9 @@ ini_set('display_errors', 1);
                 INSTRUCTIONS
                 </h2>
                 <p>In the following, we present you a choice between two validators and ask you to select which of the two you prefer. We ask you to answer five of those pairwise comparisons.</p>
-                <p>SELECTION <span id="counter">1</span>/5</p>
+            </div>
+            <div class="col-12">
+                <p class="font-weight-bold text-right">SELECTION <span id="counter">1</span>/5</p>
             </div>
         </div>
         <div class="row">
@@ -62,7 +66,7 @@ ini_set('display_errors', 1);
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <a href="checkpoint4.php" class="btn btn-lg btn-primary btn-white" role="button">Next</a>
+                <a id="submit_step_4" href="checkpoint4.php" class="btn btn-lg btn-primary btn-white disabled" role="button">Next</a>
             </div>
         </div>
     </div>
