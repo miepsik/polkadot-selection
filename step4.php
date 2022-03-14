@@ -36,7 +36,9 @@ ini_set('display_errors', 1);
                 INSTRUCTIONS
                 </h2>
                 <p>In the following, we present you a choice between two validators and ask you to select which of the two you prefer. We ask you to answer five of those pairwise comparisons.</p>
-                <p class="font-weight-bold">SELECTION <span id="counter">1</span>/5</p>
+            </div>
+            <div class="col-12">
+                <p class="font-weight-bold text-right">SELECTION <span id="counter">1</span>/5</p>
             </div>
         </div>
         <div class="row">
