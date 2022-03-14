@@ -19,7 +19,7 @@
 /* layout */
 
 .header {
-    position: relative;
+    position: fixed;
     z-index: 1001;
 }
 
@@ -40,6 +40,7 @@
     transform: translate(-50%, -50%);
     text-transform: center;
     font-size: 12px;
+    display: none;
 }
 
 .page-wrapper {
@@ -51,9 +52,10 @@
         display: block;
     }
 
-    .device-info {
+    .device-info, .device-info p {
         display: none;
     }
+
   }
 
 .step_1 .page-wrapper::before {
