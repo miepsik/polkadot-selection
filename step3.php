@@ -8,7 +8,7 @@
 
 <?php $hero_title = 'Selection A'; ?>
 <?php $withSelect = TRUE; ?>
-<?php $hero_desc = 'On this page, we show you a list of the current validators (anonymized) and would like you to select seven validators that match your preferences. As mentioned before, there is no right or wrong, we want you to select the validators as you would normally do.'; ?>
+<?php $hero_desc = 'On this page, we show you a list of the current validators (anonymized) and would like you to select 7 validators that match your preferences. As mentioned before, there is no right or wrong, we want you to select the validators as you would normally do.'; ?>
 <?php include("includes/hero.php"); ?>
 <?php require 'includes/headerRow.php'; ?>
 
@@ -19,62 +19,64 @@ checkFlow($step, $_SESSION['user'])?>
 
 <section class="bg-dark">
     <div class="container">
-        <div class="row mb-5">
+        <div class="row">
             <div class="col col-lg-6">
                 <h2 class="text-white font-weight-bold">
                     INSTRUCTIONS
                 </h2>
                 <p>
-                    Please select <b> seven </b> validators that match your preferences. You can click on the column names to sort. Once you selected exactly seven validators, please click
+                    Please select 7 validators that match your preferences. You can click on the column names to sort. Once you selected exactly seven validators, please click
                     “next” at the bottom of the screen to continue.
                 </p>
             </div>
         </div>
+    </div>
+</section>
 
 
+<section class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col mb-4"><h3>Table values</h3></div>
+        </div>
+        <div class="row">
+                <?php
+                $desc = array(
+                "Commission" => "How much the validator is charging for their services. A lower commission, 
+                all other criteria being equal, means more reward for the nominator. A higher commission of an 
+                active validator indicates more skin-in-the-game of that validator because they would miss more 
+                future rewards for getting slashed.",
+                "Self Stake" => "The amount of DOT that the validator is using to nominate themselves. 
+                Since this amount is slashable, a higher amount generally means that the validator has more 
+                skin-in-the-game.",
+                "Total Stake" => "The total amount of DOT that the validator is staking. 
+                All other criteria being equal, a lower total stake means that your stake has a larger share 
+                and increases your payoff.",
+                "Era Points" => "The total rewards to all validators is distributed based on the 
+                relative share of the era-points of one validator compared to other validators. 
+                Should be similar over time but can fluctuate based on the infrastructure and location 
+                of a validator.",
+                "Cluster Size" => "The number of (known) validators that are operated by the same entity. 
+                A higher number might indicate higher proficiency but could also indicate more centralization 
+                and a higher risk of getting slashed.",
+                "Voters" => "The number of nominators that are voting for a validator. 
+                Could be regarded as a sign of popularity.",
+                );
+
+                foreach ($desc as $key => $value) {
+                    echo "<div class=\"col-12 col-mg-6 col-lg-4 mb-4 pr-3\"><h5 class=\"font-weight-bold\">{$key}</h5><p>{$value}</p></div>";
+                }
+                ?>
+        </div>
+    </div>
+</section>
+
+        
+<section class="bg-dark">
+    <div class="container">
         <div class="row">
             <div class="col">
                 <div id="placeholder">
-                    <table>
-                        <thead role="rowgroup">
-                        <tr role="row">
-                            <td>Column</td>
-                            <td>Description</td>
-                        </tr>
-                        </thead>
-                        <tbody role="rowgroup">
-                        <?php
-                        $desc = array(
-                            "Commission (in %)" => "How much the validator is charging for their services. A lower commission, 
-    all other criteria being equal, means more reward for the nominator. A higher commission of an 
-    active validator indicates more skin-in-the-game of that validator because they would miss more 
-    future rewards for getting slashed.",
-                            "Self Stake (in DOT)" => "The amount of DOT that the validator is using to nominate themselves. 
-    Since this amount is slashable, a higher amount generally means that the validator has more 
-    skin-in-the-game.",
-                            "Total Stake (in DOT)" => "The total amount of DOT that the validator is staking. 
-    All other criteria being equal, a lower total stake means that your stake has a larger share 
-    and increases your payoff.",
-                            "Era Points" => "The total rewards to all validators is distributed based on the 
-    relative share of the era-points of one validator compared to other validators. 
-    Should be similar over time but can fluctuate based on the infrastructure and location 
-    of a validator.",
-                            "Cluster Size" => "The number of (known) validators that are operated by the same entity. 
-    A higher number might indicate higher proficiency but could also indicate more centralization 
-    and a higher risk of getting slashed.",
-                            "Voters" => "The number of nominators that are voting for a validator. 
-    Could be regarded as a sign of popularity.",
-                        );
-
-                        foreach ($desc as $key => $value) {
-                            echo "<tr><th>{$key}</th><td>{$value}</td></tr>";
-                        }
-                        ?>
-                        </tbody>
-                    </table>
-
-
-
                 <table class="table b-table table-hover table-dark sortable width-auto" aria-rowcount="5" aria-busy="false"
                     role="table"
                     aria-colcount="7">
