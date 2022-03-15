@@ -19,7 +19,7 @@ function getRow($data, $i, $a) {
 
 function printOptions($options, $id) {
     foreach ($options as $opt) {
-        echo "<input type=\"radio\" id=\"{$opt}{$id}\" name=\"q{$id}\" value=\"{$opt}\">
+        echo "<input type=\"radio\" id=\"{$opt}{$id}\" name=\"q{$id}\" value=\"{$opt}\" required>
                     <label for=\"{$opt}{$id}\">{$opt}</label><br>";
     }
 }
@@ -110,9 +110,9 @@ $stmt->close();
                     <?php printOptions(array("Yes", "No"), 6); ?>
 
                     <div id="optional1" style="display: none">
-                    <h3>IF YES: Please estimate how much of your total staked funds (in percent) you hold at custodial staking
+                    <h3>Please estimate how much of your total staked funds (in percent) you hold at custodial staking
                         services (for example exchanges)</h3>
-                    <input type="number" max="100" min="0" id="q7">
+                    <input type="number" max="100" min="0" id="q7"> %
                     </div>
 
                     <h3>Are you currently staking any other token than DOT or KSM?</h3>
@@ -121,7 +121,7 @@ $stmt->close();
                     <div id="optional2" style="display: none">
                     <h3>Please estimate how much of your total staked funds (in percent) you hold at custodial staking
                         services (for example exchanges)</h3>
-                    <input type="number" max="100" min="0" id="q9">
+                    <input type="number" max="100" min="0" id="q9"> %
                     </div>
 
                     <h3>How often do you nominate validators yourself on Polkadot?</h3>
@@ -179,18 +179,16 @@ $stmt->close();
 <script type="text/javascript">
     var optionA = document.getElementById("Yes6");
     var optionB = document.getElementById("No6");
-    var question = document.getElementById("optional1");  //   HTML ID of the text input
+    var question = document.getElementById("optional1");
 
     function toogle1() {
-        // the two pipes (||) are a logicial "or"
-        // the condition checks: is option A selected or is B selected?
         if (optionA.checked) {
-            // if "yes" or "maybe" is selected, then the question is shown
-            // no input ("") uses the default setting (display as usual)
             question.style.display = "";
+            document.getElementById("q7").required = true;
         } else {
-            // question is hidden if the "none" option is selected
             question.style.display = "none";
+            document.getElementById("q7").required = false;
+
         }
     }
     optionA.addEventListener("click", toogle1, false);
@@ -199,18 +197,15 @@ $stmt->close();
 
     var optionA2 = document.getElementById("Yes8");
     var optionB2 = document.getElementById("No8");
-    var question2 = document.getElementById("optional2");  //   HTML ID of the text input
+    var question2 = document.getElementById("optional2");
 
     function toogle2() {
-        // the two pipes (||) are a logicial "or"
-        // the condition checks: is option A selected or is B selected?
         if (optionA2.checked) {
-            // if "yes" or "maybe" is selected, then the question is shown
-            // no input ("") uses the default setting (display as usual)
             question2.style.display = "";
+            document.getElementById("q9").required = true;
         } else {
-            // question is hidden if the "none" option is selected
             question2.style.display = "none";
+            document.getElementById("q9").required = false;
         }
     }
     optionA2.addEventListener("click", toogle2, false);
