@@ -53,24 +53,28 @@ $manualFirst = (bool)random_int(0, 1);
 <?php $step = 5; ?>
 <?php include("includes/header.php"); ?>
 
+<!-- custom js -->
+<script type="text/javascript" src="/custom/js/customSelection3.js"></script>
+<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+
 <?php $hero_title = 'Final Selection'; ?>
 <?php $hero_desc = 'In this stage, we would like to ask you to make a final choice of your preferred validators. Be aware that your participation reward will be staked with those validators, before you receive it. Pease select 7 validators in total.'; ?>
 <?php include("includes/hero.php"); ?>
 <?php require_once "includes/checkpoint.php"; ?>
 <?php checkFlow($step, $_SESSION['user'])?>
 
-<!-- custom js -->
-<script type="text/javascript" src="/custom/js/customSelection3.js"></script>
-
 <section class="bg-dark">
     <div class="container">
         <div class="row mb-5">
             <div class="col col-lg-6">
+                <h2 class="text-white font-weight-bold">
+                INSTRUCTIONS
+                </h2>
                 <p>This table lists all validators from the Selection A (your manual selection) and the Selection B (algorithm recommendation). The column "Selection" indicates from which part of the study they were selected. In the case that a validator is in both selections, it is marked as "AB".</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-6">
+            <div class="col">
                 <table class="table b-table table-hover table-dark sortable width-auto" aria-rowcount="5" aria-busy="false"
                     role="table"
                     aria-colcount="6">
@@ -118,7 +122,7 @@ $manualFirst = (bool)random_int(0, 1);
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <button class="btn btn-lg btn-primary btn-white" onclick="proceed()" class="btn btn-info" role="button">Next</button>
+                <button id="submit_step_5" class="btn btn-lg btn-primary btn-white" onclick="proceed()" class="btn btn-info" role="button">Next</button>
             </div>
         </div>
     </div>

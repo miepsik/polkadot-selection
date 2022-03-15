@@ -13,9 +13,9 @@
 <?php require 'includes/headerRow.php'; ?>
 
 <?php 
-require_once "includes/checkpoint.php"; ?>
+//require_once "includes/checkpoint.php"; ?>
 <?php 
-checkFlow($step, $_SESSION['user'])?>
+//checkFlow($step, $_SESSION['user'])?>
 
 <section class="bg-dark">
     <div class="container">
