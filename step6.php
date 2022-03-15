@@ -112,7 +112,7 @@ $stmt->close();
 
 
                 <h3 class="my-4">Why</h3>
-                <textarea name="q5" form="questionnaire" style="width: 100%; min-height: 200px; padding: 20px;"></textarea>
+                <textarea name="q5" form="questionnaire" style="width: 100%; min-height: 200px; padding: 20px;" placeholder="Enter text here..."></textarea>
             </div>
         </div>
     </div>
