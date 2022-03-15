@@ -112,7 +112,7 @@ $stmt->close();
 
 
                 <h3 class="my-4">Why</h3>
-                <textarea name="q5" form="questionnaire" style="width: 100%; min-height: 200px; padding: 20px;"></textarea>
+                <textarea name="q5" form="questionnaire" style="width: 100%; min-height: 200px; padding: 20px;" placeholder="Enter text here..."></textarea>
             </div>
         </div>
     </div>
@@ -138,9 +138,9 @@ $stmt->close();
                 <?php printOptions(array("Yes", "No"), 6); ?>
 
                 <div id="optional1" style="display: none">
-                <h3 class="my-4">IF YES: Please estimate how much of your total staked funds (in percent) you hold at custodial staking
-                    services (for example exchanges)</h3>
-                <input type="number" max="100" min="0" id="q7">
+                <h5 class="my-4 text-secondary">Please estimate how much of your total staked funds (in percent) you hold at custodial staking
+                    services (for example exchanges)</h5>
+                <input type="number" max="100" min="0" id="q7" placeholder="0-100%" class="p-3 border-0 rounded-lg col-3 mr-2 bg-light">
                 </div>
 
 
@@ -148,9 +148,9 @@ $stmt->close();
                 <?php printOptions(array("Yes", "No"), 8); ?>
 
                 <div id="optional2" style="display: none">
-                <h3 class="my-4">Please estimate how much of your total staked funds (in percent) you hold at custodial staking
-                    services (for example exchanges)</h3>
-                <input type="number" max="100" min="0" id="q9">
+                <h5 class="my-4 text-secondary">Please estimate how much of your total staked funds (in percent) you hold at custodial staking
+                    services (for example exchanges)</h5>
+                <input type="number" max="100" min="0" id="q9" placeholder="0-100%" class="p-3 border-0 rounded-lg col-3 mr-2 bg-light">
                 </div>
 
                 <h3 class="my-4">How often do you nominate validators yourself on Polkadot?</h3>
