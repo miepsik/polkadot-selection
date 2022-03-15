@@ -8,8 +8,9 @@ function select(id) {
     }
     objs = document.querySelectorAll("[data-coil='b" + id + "']");
     objs.forEach(function (x) {
-      x.style.background = "#EFEFEF";
+      x.classList.remove("selected");
     });
+    enableSubmitStep5();
     return;
   }
   if (selected.length >= 7) {
@@ -18,8 +19,9 @@ function select(id) {
   selected.push(id);
   objs = document.querySelectorAll("[data-coil='b" + id + "']");
   objs.forEach(function (x) {
-    x.style.background = "#e6007a";
+    x.classList.add("selected");
   });
+  enableSubmitStep5();
 }
 
 function proceed() {
@@ -39,3 +41,15 @@ function proceed() {
     },
   });
 }
+
+const enableSubmitStep5 = () => {
+  const $button = $("#submit_step_5");
+
+  if (selected.length === 7) {
+    $button.prop("disabled", false);
+    $("table button:not(.selected)").prop("disabled", true);
+  } else {
+    $button.prop("disabled", true);
+    $("table button:not(.selected)").prop("disabled", false);
+  }
+};
