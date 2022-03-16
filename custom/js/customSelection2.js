@@ -72,7 +72,7 @@ $(function () {
     const $counter = $("#counter");
     $counter.html(counter);
 
-    if (counter > 7) {
+    if (counter > 6) {
       $button.removeClass("disabled");
     }
   };
