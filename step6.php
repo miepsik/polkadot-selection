@@ -41,7 +41,7 @@ $stmt->close();
 <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 
 <?php $hero_title = 'Questionnaire'; ?>
-<?php $hero_desc = 'In this part, we would like to ask you a few more questions. Please note, that your answers are anonymous and we do not try to link them to your identity.'; ?>
+<?php $hero_desc = 'In this part, we would like to ask you a few more questions. Please note, that your answers are anonymous and we do not link them to your identity.'; ?>
 <?php include("includes/hero.php"); ?>
 <?php require_once "includes/checkpoint.php"; ?>
 <?php checkFlow($step, $_SESSION['user'])?>
@@ -95,19 +95,19 @@ $stmt->close();
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10 col-lg-7">
-                <h3 class="my-4">How well does the recommendation suit your preferences?</h3>
+                <h3 class="my-4">How well does the recommendation suit your preferences?*</h3>
 
                 <?php printOptions(array("Very well", "To some extend", "Not very well", "Not at all"), 1); ?>
 
-                <h3 class="my-4">If you would have to evaluate the effort that it took for manual selection (Selection A)?</h3>
+                <h3 class="my-4">If you would have to evaluate the effort that it took for manual selection (Selection A)?*</h3>
                 <?php printOptions(array("Very easy", "Easy", "Medium", "Hard", "Very hard"), 2); ?>
 
                 <?php if (true):?>
-                <h3 class="my-4">If you would have to evaluate the effort that it took for the algorithm (Selection B)?</h3>
+                <h3 class="my-4">If you would have to evaluate the effort that it took for the pairwise comparisons (Selection B)?*</h3>
                 <?php printOptions(array("Very easy", "Easy", "Medium", "Hard", "Very hard"), 3); ?>
 
                 <?php endif;?>
-                <h3 class="my-4">Which method would you prefer having the choice?</h3>
+                <h3 class="my-4">Which method would you prefer having the choice?*</h3>
                 <?php printOptions(array("Manual", "Rather manual", "I don't know", "Rather algorithm", "Algorithm"), 4); ?>
 
 
@@ -134,41 +134,41 @@ $stmt->close();
     <div class="container">
     <div class="row justify-content-center">
             <div class="col-10 col-lg-7">
-                <h3 class="my-4">Are you currently staking any DOT or KSM?</h3>
+                <h3 class="my-4">Are you currently staking any DOT or KSM?*</h3>
                 <?php printOptions(array("Yes", "No"), 6); ?>
 
                 <div id="optional1" style="display: none">
                 <h5 class="my-4 text-secondary">Please estimate how much of your total staked funds (in percent) you hold at custodial staking
-                    services (for example exchanges)</h5>
+                    services (for example exchanges).*</h5>
                 <input type="number" max="100" min="0" id="q7" placeholder="0-100%" class="p-3 border-0 rounded-lg col-3 mr-2 bg-light">
                 </div>
 
 
-                <h3 class="my-4">Are you currently staking any other token than DOT or KSM?</h3>
+                <h3 class="my-4">Are you currently staking any other token than DOT or KSM?*</h3>
                 <?php printOptions(array("Yes", "No"), 8); ?>
 
                 <div id="optional2" style="display: none">
                 <h5 class="my-4 text-secondary">Please estimate how much of your total staked funds (in percent) you hold at custodial staking
-                    services (for example exchanges)</h5>
+                    services (for example exchanges).*</h5>
                 <input type="number" max="100" min="0" id="q9" placeholder="0-100%" class="p-3 border-0 rounded-lg col-3 mr-2 bg-light">
                 </div>
 
-                <h3 class="my-4">How often do you nominate validators yourself on Polkadot?</h3>
+                <h3 class="my-4">How often do you nominate validators yourself on Polkadot?*</h3>
                 <?php printOptions(array("Daily", "Weekly", "Monthly", "Once per several months", "Once per year", "Never"), 10); ?>
 
-                <h3 class="my-4">How often do you open polkadot.js.org/apps?</h3>
+                <h3 class="my-4">How often do you open polkadot.js.org/apps?*</h3>
                 <?php printOptions(array("Daily", "Weekly", "Monthly", "Once per several months", "Once per year", "Never"), 11); ?>
 
-                <h3 class="my-4">How do you rate the current staking experience on Polkadot?</h3>
+                <h3 class="my-4">How do you rate the current staking experience on Polkadot?*</h3>
                 <?php printOptions(array("Very good", "Good", "Not so good", "Very bad"), 12); ?>
 
-                <h3 class="my-4">How do you rate the current staking experience on other networks?</h3>
+                <h3 class="my-4">How do you rate the current staking experience on other networks?*</h3>
                 <?php printOptions(array("Very good", "Good", "Not so good", "Very bad"), 13); ?>
 
-                <h3 class="my-4">How well do you think you understand Polkadot?</h3>
+                <h3 class="my-4">How well do you think you understand Polkadot?*</h3>
                 <?php printOptions(array("Very well", "To some extend", "Not very well", "Not at all"), 14); ?>
 
-                <h3 class="my-4">How long have you held crypto-currencies in general?</h3>
+                <h3 class="my-4">How long have you held crypto-currencies in general?*</h3>
                 <?php printOptions(array("Less than 1 month", "Between 1 to 6 months", "Between 6 to 12 months",
                     "Between 1-2 years", "Between 2-3 years", "More than 3 years"), 15); ?>
             </div>
