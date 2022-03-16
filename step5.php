@@ -83,7 +83,7 @@ $manualFirst = (bool)random_int(0, 1);
                         <?php
                             $columns = getHeaders();
                             array_unshift($columns , 'Selection');
-                            $columns[] = 'Select';
+                            $columns[] = '';
                             printHeaders($columns)
 
                         ?>
