@@ -84,7 +84,7 @@ checkFlow($step, $_SESSION['user'])?>
                     <tr role="row">
                         <?php
                         $columns = getHeaders();
-                        $columns[] = 'Select';
+                        $columns[] = '';
                         printHeaders($columns)
 
                         ?>

@@ -152,18 +152,6 @@
 /* table headers & sortable */
 
 
-/* hide select header */
-
-.row th[role="columnheader"]:last-of-type {
-    pointer-events: none;
-}
-
-.row th[role="columnheader"]:last-of-type div {
-    display: none !important;
-}
-
-/* ^^ hide select header */
-
 .sortable table {
     position: relative;
     border-collapse: collapse;
