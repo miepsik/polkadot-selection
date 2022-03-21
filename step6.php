@@ -102,17 +102,18 @@ $stmt->close();
                 <h3 class="my-4">If you would have to evaluate the effort that it took for manual selection (Selection A)?*</h3>
                 <?php printOptions(array("Very easy", "Easy", "Medium", "Hard", "Very hard"), 2); ?>
 
-                <?php if (true):?>
+                <?php if ($_SESSION['type'] != 'random'):?>
                 <h3 class="my-4">If you would have to evaluate the effort that it took for the pairwise comparisons (Selection B)?*</h3>
                 <?php printOptions(array("Very easy", "Easy", "Medium", "Hard", "Very hard"), 3); ?>
 
-                <?php endif;?>
+
                 <h3 class="my-4">Which method would you prefer having the choice?*</h3>
                 <?php printOptions(array("Manual", "Rather manual", "I don't know", "Rather algorithm", "Algorithm"), 4); ?>
 
 
                 <h3 class="my-4">Why</h3>
                 <textarea name="q5" form="questionnaire" style="width: 100%; min-height: 200px; padding: 20px;" placeholder="Enter text here..."></textarea>
+                <?php endif;?>
             </div>
         </div>
     </div>

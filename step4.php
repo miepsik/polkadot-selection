@@ -9,10 +9,10 @@ ini_set('display_errors', 1);
 
 <?php $step = 4; ?>
 <?php include("includes/header.php"); ?>
-<?php 
+<?php
 require_once "includes/checkpoint.php"; ?>
-<?php 
-checkFlow($step, $_SESSION['user'])?>
+<?php
+checkFlow($step, $_SESSION['user']) ?>
 
 <!-- custom js -->
 <script type="text/javascript" src="/custom/js/customSelection2.js"></script>
@@ -20,8 +20,13 @@ checkFlow($step, $_SESSION['user'])?>
 <!-- custom css -->
 <style>
     /* hide data dump */
-    #placeholder > #a1 { display: none; }
-    #placeholder > #b1 { display: none; }
+    #placeholder > #a1 {
+        display: none;
+    }
+
+    #placeholder > #b1 {
+        display: none;
+    }
 </style>
 
 <?php $hero_title = 'Selection B'; ?>
@@ -30,12 +35,14 @@ checkFlow($step, $_SESSION['user'])?>
 
 <section class="bg-dark">
     <div class="container">
-        <div class="row mb-5">
+        <div class="row mb-5" <?php if ($_SESSION['type'] == 'random') echo "style=\"display: none\"" ?>>
             <div class="col col-lg-6">
                 <h2 class="text-white font-weight-bold">
-                INSTRUCTIONS
+                    INSTRUCTIONS
                 </h2>
-                <p>In the following, we present you a choice between two validators and ask you to select which of the two you prefer. We ask you to answer five of those pairwise comparisons. Afterwards, the active learning algorithm selects the most suited validators from all available validators.</p>
+                <p>In the following, we present you a choice between two validators and ask you to select which of the
+                    two you prefer. We ask you to answer five of those pairwise comparisons. Afterwards, the active
+                    learning algorithm selects the most suited validators from all available validators.</p>
             </div>
             <div class="col-12">
                 <p class="font-weight-bold text-right">SELECTION <span id="counter">1</span>/5</p>
@@ -59,14 +66,16 @@ checkFlow($step, $_SESSION['user'])?>
         <div class="row mb-5">
             <div class="col col-lg-6 text-white">
                 <h2 class="font-weight-bold text-white">
-                GO TO THE NEXT STEP
+                    GO TO THE NEXT STEP
                 </h2>
-                <p>Thank you very much for your choices. After you answered the above questions, you can continue to the next part of the study.</p>
+                <p>Thank you very much for your choices. After you answered the above questions, you can continue to the
+                    next part of the study.</p>
             </div>
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <a id="submit_step_4" href="checkpoint4.php" class="btn btn-lg btn-primary btn-white disabled" role="button">Next</a>
+                <a id="submit_step_4" href="checkpoint4.php" class="btn btn-lg btn-primary btn-white disabled"
+                   role="button">Next</a>
             </div>
         </div>
     </div>

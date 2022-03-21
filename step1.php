@@ -1,3 +1,4 @@
+<?php session_destroy();?>
 <?php $step = 1; ?>
 <?php include("includes/header.php"); ?>
 
