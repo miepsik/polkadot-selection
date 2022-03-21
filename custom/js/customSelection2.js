@@ -9,6 +9,7 @@ $(function () {
     var data = {
       history: hist,
       user: document.getElementById("user").innerText,
+      type: document.getElementById("type").innerText,
     };
 
     $.ajax({
@@ -39,6 +40,7 @@ $(function () {
     var data = {
       history: hist,
       user: document.getElementById("user").innerText,
+      type: document.getElementById("type").innerText,
     };
 
     $.ajax({
@@ -51,6 +53,10 @@ $(function () {
       },
       success: function (response) {
         update(response);
+          if (response.indexOf("counter=9;") >= 0) {
+            counter = 9;
+              enableSubmitStep4();
+          }
       },
       error: function (error) {
         console.log("Something went wrong", error);

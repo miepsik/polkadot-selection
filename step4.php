@@ -73,4 +73,6 @@ checkFlow($step, $_SESSION['user'])?>
 </section>
 
 <div id="user" style="display: none"><?php echo $_SESSION['user'] ?></div>
+<div id="type" style="display: none"><?php echo $_SESSION['type'] ?></div>
+
 <?php include("includes/footer.php"); ?>

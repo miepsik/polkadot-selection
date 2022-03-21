@@ -66,23 +66,42 @@ if ($stmt->num_rows > 0) {
 }
 $stmt->close();
 
-$stmt = $db->prepare("SELECT * from users WHERE ukey = ?");
+$stmt = $db->prepare("SELECT type from users WHERE ukey = ?");
 $stmt->bind_param("s", $code);
 $stmt->execute();
+$stmt->bind_result($qq);
 $stmt->store_result();
 
 if ($stmt->num_rows < 1) {
     $stmt->close();
-    $stmt = $db->prepare("INSERT INTO users(ukey, udate, finished) VALUES(?, NOW(), ?)");
+
+    if (strlen($code) == 10) {
+        if ($code[0] == '1') {
+            $_SESSION['type'] = 'random';
+        }
+        if ($code[0] == '2') {
+            $_SESSION['type'] = 'real';
+        }
+        if ($code[0] == '3') {
+            $_SESSION['type'] = 'fictive';
+        }
+    } else {
+        $_SESSION['type'] = array('random', 'real', 'fictive')[array_rand(array(1, 2, 3))];
+    }
+
+    $tt = $_SESSION['type'];
+    $stmt = $db->prepare("INSERT INTO users(ukey, udate, finished, type) VALUES(?, NOW(), ?, ?)");
     $step = 0;
-    $stmt->bind_param("si", $code, $step);
+    $stmt->bind_param("sis", $code, $step, $tt);
     $stmt->execute();
+
+} else {
+    $stmt->fetch();
+    $_SESSION['type'] = $qq;
 }
 $stmt->close();
 $db->close();
-
 $_SESSION['user'] = $code;
-$_SESSION['placebo'] = false;
 saveStep($code, 1);
 header("Location: step2.php");
 die();
