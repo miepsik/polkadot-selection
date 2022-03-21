@@ -37,7 +37,7 @@ checkFlow($step, $_SESSION['user'])?>
 <section class="bg-white">
     <div class="container">
         <div class="row">
-            <div class="col mb-4"><h3>Table values</h3></div>
+            <div class="col mb-4"><h3>Variable Explanations</h3></div>
         </div>
         <div class="row">
                 <?php
@@ -53,14 +53,14 @@ checkFlow($step, $_SESSION['user'])?>
                 All other criteria being equal, a lower total stake means that your stake has a larger share 
                 and increases your payoff.",
                 "Era Points" => "The total rewards to all validators is distributed based on the 
-                relative share of the era-points of one validator compared to other validators. 
-                Should be similar over time but can fluctuate based on the infrastructure and location 
+                relative share of the era points of one validator compared all other validators. 
+                This should be similar over time but fluctuations could indicate differences in infrastructure and location 
                 of a validator.",
                 "Cluster Size" => "The number of (known) validators that are operated by the same entity. 
                 A higher number might indicate higher proficiency but could also indicate more centralization 
                 and a higher risk of getting slashed.",
                 "Voters" => "The number of nominators that are voting for a validator. 
-                Could be regarded as a sign of popularity.",
+                This could be regarded as a sign of popularity.",
                 );
 
                 foreach ($desc as $key => $value) {
