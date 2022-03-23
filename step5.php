@@ -70,7 +70,7 @@ $manualFirst = (bool)random_int(0, 1);
                 <h2 class="text-white font-weight-bold">
                 INSTRUCTIONS
                 </h2>
-                <p>This table lists all validators from the Selection A (your manual selection) and the Selection B (algorithm recommendation). The column "Selection" indicates from which part of the study they were selected. In the case that a validator is in both selections, it is marked as "AB".</p>
+                <p>This table lists all validators from the Part A (your manual selection) and the Part B (algorithm recommendation). The column "Selection" indicates from which part of the study they were selected. In the case that a validator is in both selections, it is marked as "AB".</p>
             </div>
         </div>
         <div class="row">

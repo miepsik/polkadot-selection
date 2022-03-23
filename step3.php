@@ -6,7 +6,7 @@
 <script type="text/javascript" src="/custom/js/customSelection1.js"></script>
 <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 
-<?php $hero_title = 'Selection A'; ?>
+<?php $hero_title = 'Part A'; ?>
 <?php $withSelect = TRUE; ?>
 <?php $hero_desc = 'On this page, we show you a list of the current validators (anonymized) and would like you to select 7 validators that match your preferences. As mentioned before, there is no right or wrong, we want you to select the validators as you would normally do.'; ?>
 <?php include("includes/hero.php"); ?>
