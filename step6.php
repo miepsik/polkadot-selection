@@ -112,7 +112,7 @@ $stmt->close();
 
 
                 <h3 class="my-4">Why</h3>
-                <textarea name="q5" form="questionnaire" style="width: 100%; min-height: 200px; padding: 20px;" placeholder="Enter text here..."></textarea>
+                <textarea name="q5" maxlength="300" form="questionnaire" style="width: 100%; min-height: 200px; padding: 20px;" placeholder="Enter text here..."></textarea>
                 <?php endif;?>
             </div>
         </div>
@@ -187,10 +187,10 @@ $stmt->close();
         <div class="row justify-content-center">
             <div class="col-10 col-lg-7">
                 <h5 class="my-4 text-white text-center">Do you have any ideas how to further improve the staking experience on Polkadot?</h5>
-                <textarea name="q16" form="questionnaire" style="width: 100%; min-height: 200px; padding: 20px;" placeholder="Enter text here..."></textarea>
+                <textarea name="q16" maxlength="300" form="questionnaire" style="width: 100%; min-height: 200px; padding: 20px;" placeholder="Enter text here..."></textarea>
 
                 <h5 class="my-4 text-white text-center">Do you have any comments with regard to this study?</h5>
-                <textarea name="q17" form="questionnaire" style="width: 100%; min-height: 200px; padding: 20px;" placeholder="Enter text here..."></textarea>
+                <textarea name="q17" maxlength="300" form="questionnaire" style="width: 100%; min-height: 200px; padding: 20px;" placeholder="Enter text here..."></textarea>
             </div>
         </div>
     </div>
