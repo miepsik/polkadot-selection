@@ -29,7 +29,7 @@ checkFlow($step, $_SESSION['user']) ?>
     }
 </style>
 
-<?php $hero_title = 'Selection B'; ?>
+<?php $hero_title = 'Part B'; ?>
 <?php $hero_desc = 'In this stage, we use an algorithm to provide a recommendation of validators for you.'; ?>
 <?php include("includes/hero.php"); ?>
 
