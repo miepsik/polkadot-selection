@@ -68,7 +68,7 @@ checkFlow($step, $_SESSION['user']) ?>
                 <h2 class="font-weight-bold text-white">
                     GO TO THE NEXT STEP
                 </h2>
-                <p> After you answered the above questions, you can continue to the
+                <p>After you answered the above questions, you can continue to the
                     next part of the study.</p>
             </div>
         </div>
