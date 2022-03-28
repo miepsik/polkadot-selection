@@ -95,7 +95,7 @@ checkFlow($step, $_SESSION['user']) ?>
             <div class="row mb-5">
                 <div class="col col-lg-6">
                     <h2 class="text-white font-weight-bold">YOUR INFO</h2>
-                    <p>Please leave your email address so that we can follow up with you and your Polkadot address that
+                    <p>Please leave your email address so that we can follow up with you and a new or existing Polkadot address that
                         you want to
                         receive the reward for participating in this study.
                     </p>
