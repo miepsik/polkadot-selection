@@ -46,7 +46,7 @@ checkFlow($step, $_SESSION['user']) ?>
                         final reward. At each step of the study, you will find the necessary instructions. Generally,
                         choices depend on your preferences and are neither right nor wrong.</p>
 
-                    <p>Upon successful participation, we grant you a DOT reward, funded by the Polkadot Treasury. Before
+                    <p>Upon successful participation, we grant you a DOT reward. Before
                         we
                         deliver the reward, it will be staked with the validators that you ultimately choose during this
                         study until the <?php echo date('M d, Y', $date);?>. Note, that your reward is exposed to the performance but also potential
