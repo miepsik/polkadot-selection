@@ -161,10 +161,10 @@ $stmt->close();
                 <?php printOptions(array("Daily", "Weekly", "Monthly", "Once per several months", "Once per year", "Never"), 11); ?>
 
                 <h3 class="my-4">How would you rate the user experience of staking on Polkadot?*</h3>
-                <?php printOptions(array("Very good", "Good", "Not so good", "Very bad"), 12); ?>
+                <?php printOptions(array("Cannot say", "Very good", "Good", "Not so good", "Very bad"), 12); ?>
 
                 <h3 class="my-4">How would you rate the user experience of staking on other networks?*</h3>
-                <?php printOptions(array("Very good", "Good", "Not so good", "Very bad"), 13); ?>
+                <?php printOptions(array("Cannot say", "Very good", "Good", "Not so good", "Very bad"), 13); ?>
 
                 <h3 class="my-4">How well do you think you understand the Polkadot protocol?*</h3>
                 <?php printOptions(array("Very well", "To some extent", "Not very well", "Not at all"), 14); ?>
