@@ -99,11 +99,11 @@ $stmt->close();
 
                 <?php printOptions(array("Very well", "To some extent", "Not very well", "Not at all"), 1); ?>
 
-                <h3 class="my-4">How would you rate the effort it took for manually selecting validators (Part A)?*</h3>
+                <h3 class="my-4">How would you rate the difficulty of manually selecting validators (Part A)?*</h3>
                 <?php printOptions(array("Very easy", "Easy", "Medium", "Hard", "Very hard"), 2); ?>
 
                 <?php if ($_SESSION['type'] != 'random'):?>
-                <h3 class="my-4">How would you rate the effort it took for the pairwise comparisons (Part B)?*</h3>
+                <h3 class="my-4">How would you rate the difficulty of the pairwise comparisons (Part B)?*</h3>
                 <?php printOptions(array("Very easy", "Easy", "Medium", "Hard", "Very hard"), 3); ?>
 
 
