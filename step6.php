@@ -97,7 +97,7 @@ $stmt->close();
             <div class="col-10 col-lg-7">
                 <h3 class="my-4">How well does the recommendation suit your preferences?*</h3>
 
-                <?php printOptions(array("Very well", "To some extend", "Not very well", "Not at all"), 1); ?>
+                <?php printOptions(array("Very well", "To some extent", "Not very well", "Not at all"), 1); ?>
 
                 <h3 class="my-4">If you would have to evaluate the effort that it took for manual selection (Part A)?*</h3>
                 <?php printOptions(array("Very easy", "Easy", "Medium", "Hard", "Very hard"), 2); ?>
@@ -107,7 +107,7 @@ $stmt->close();
                 <?php printOptions(array("Very easy", "Easy", "Medium", "Hard", "Very hard"), 3); ?>
 
 
-                <h3 class="my-4">Which method would you prefer having the choice?*</h3>
+                <h3 class="my-4">Given a choice, which method would you prefer?*</h3>
                 <?php printOptions(array("Manual", "Rather manual", "I don't know", "Rather algorithm", "Algorithm"), 4); ?>
 
 
@@ -167,7 +167,7 @@ $stmt->close();
                 <?php printOptions(array("Very good", "Good", "Not so good", "Very bad"), 13); ?>
 
                 <h3 class="my-4">How well do you think you understand Polkadot?*</h3>
-                <?php printOptions(array("Very well", "To some extend", "Not very well", "Not at all"), 14); ?>
+                <?php printOptions(array("Very well", "To some extent", "Not very well", "Not at all"), 14); ?>
 
                 <h3 class="my-4">How long have you held crypto-currencies in general?*</h3>
                 <?php printOptions(array("Less than 1 month", "Between 1 to 6 months", "Between 6 to 12 months",
