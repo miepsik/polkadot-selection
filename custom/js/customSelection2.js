@@ -76,10 +76,10 @@ $(function () {
     counter++;
     const $button = $("#submit_step_4");
     const $counter = $("#counter");
-    if (counter < 6)
+    if (counter < 7)
       $counter.html(counter);
 
-    if (counter > 5) {
+    if (counter > 6) {
       $button.removeClass("disabled");
     }
   };

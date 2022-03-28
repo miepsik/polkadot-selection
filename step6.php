@@ -141,7 +141,7 @@ $stmt->close();
                 <div id="optional1" style="display: none">
                 <h5 class="my-4 text-secondary">Please estimate how much of your total staked funds (in percent) you hold at custodial staking
                     services (for example exchanges).*</h5>
-                <input type="number" max="100" min="0" id="q7" placeholder="0-100%" class="p-3 border-0 rounded-lg col-3 mr-2 bg-light">
+                <input type="number" max="100" min="0" name="q7" id="q7" placeholder="0-100%" class="p-3 border-0 rounded-lg col-3 mr-2 bg-light">
                 </div>
 
 
@@ -151,7 +151,7 @@ $stmt->close();
                 <div id="optional2" style="display: none">
                 <h5 class="my-4 text-secondary">Please estimate how much of your total staked funds (in percent) you hold at custodial staking
                     services (for example exchanges).*</h5>
-                <input type="number" max="100" min="0" id="q9" placeholder="0-100%" class="p-3 border-0 rounded-lg col-3 mr-2 bg-light">
+                <input type="number" max="100" min="0" name="q9" id="q9" placeholder="0-100%" class="p-3 border-0 rounded-lg col-3 mr-2 bg-light">
                 </div>
 
                 <h3 class="my-4">How often do you nominate validators yourself on Polkadot?*</h3>

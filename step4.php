@@ -45,7 +45,7 @@ checkFlow($step, $_SESSION['user']) ?>
                     learning algorithm selects the most suited validators from all available validators.</p>
             </div>
             <div class="col-12">
-                <p class="font-weight-bold text-right">SELECTION <span id="counter">1</span>/5</p>
+                <p class="font-weight-bold text-right">SELECTION <span id="counter">1</span>/6</p>
             </div>
         </div>
         <div class="row">
