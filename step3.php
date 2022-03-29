@@ -77,6 +77,9 @@ checkFlow($step, $_SESSION['user'])?>
         <div class="row">
             <div class="col">
                 <div id="placeholder">
+                    <div id="counterdiv" style="position: fixed; bottom: 0; right: 10px; display: none">
+                        <p class="font-weight-bold text-right">SELECTION <span id="counter">1</span>/7</p>
+                    </div>
                 <table class="table b-table table-hover table-dark sortable width-auto" aria-rowcount="5" aria-busy="false"
                     role="table"
                     aria-colcount="7">
