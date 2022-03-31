@@ -96,10 +96,15 @@ $manualFirst = (bool)random_int(0, 1);
                     if (($handle = fopen("validators2.csv", "r")) !== FALSE) {
                         while (($data = fgetcsv($handle, 5000, ",")) !== FALSE) {
                             if (++$i < 0) continue;
-                            echo getRow($data, $i, $selected, $proposed);
+
                             $df[] = $data;
                         }
                         fclose($handle);
+                        shuffle($df);
+                        $i = 0;
+                        foreach ($df as $data) {
+                            echo getRow($data, $i, $selected, $proposed);
+                        }
                     }
                     ?>
                     </tbody>
