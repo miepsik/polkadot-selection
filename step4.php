@@ -41,8 +41,9 @@ checkFlow($step, $_SESSION['user']) ?>
                     INSTRUCTIONS
                 </h2>
                 <p>In the following, we present you a choice between two validators and ask you to select which of the
-                    two you prefer. We ask you to answer five of those pairwise comparisons. Afterwards, the active
-                    learning algorithm selects the most suited validators from all available validators.</p>
+                    two you prefer. We ask you to answer six of those pairwise comparisons. Afterwards, the active
+                    learning algorithm selects the most suited validators from all available validators. If you read the
+                    instruction and can start please click ready.</p>
             </div>
             <div class="col-12">
                 <p class="font-weight-bold text-right">SELECTION <span id="counter">1</span>/6</p>
@@ -52,6 +53,7 @@ checkFlow($step, $_SESSION['user']) ?>
             <div class="col">
                 <div class="selection">
                     <div id="placeholder">
+                        <button id="start" class="btn btn-lg btn-primary btn-white ml-4">Ready</button>
                         <div id="a1"></div>
                         <div id="b1"></div>
                     </div>

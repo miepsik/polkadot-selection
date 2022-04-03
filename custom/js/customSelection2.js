@@ -35,7 +35,7 @@ $(function () {
     d.innerHTML = response;
   }
 
-  $(document).ready(function () {
+  $("#start").click(function () {
     var hist = "";
     var data = {
       history: hist,
