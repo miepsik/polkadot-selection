@@ -95,6 +95,10 @@ $stmt->close();
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10 col-lg-7">
+
+                <h3 class="my-4">Are you or have you been a validator on Polkadot or Kusama?*</h3>
+                <?php printOptions(array("Yes", "No"), 0); ?>
+
                 <h3 class="my-4">How well does the recommendation suit your preferences?*</h3>
 
                 <?php printOptions(array("Very well", "To some extent", "Not very well", "Not at all"), 1); ?>

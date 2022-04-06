@@ -49,7 +49,7 @@ checkFlow($step, $_SESSION['user']) ?>
                     <p>Upon successful participation, we grant you a DOT reward. Before
                         we
                         deliver the reward, it will be staked with the validators that you ultimately choose during this
-                        study until the <?php echo date('M d, Y', $date);?>. Note, that your reward is exposed to the performance but also potential
+                        study until the 20th of May. Note, that your reward is exposed to the performance but also potential
                         slashes
                         of those validators. This means, the choices you make are meaningful for your final reward. You
                         will

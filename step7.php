@@ -16,7 +16,7 @@
                     validators. Since this amount is below the staking limit, we will track the average performance (and
                     potential slashes) until the end of the study and thereby estimate your staking rewards
                     theoretically. The final payout (baseline plus staking rewards) will be send to your specified
-                    address around the <?php echo date('M d, Y', $date); ?>. If you have any questions, please
+                    address around the 20th of May. If you have any questions, please
                     <nobr>contact <a href="mailto:experiments@web3.foundation"
                                            class="font-weight-bold text-underline"
                                            target="_blank">experiments@web3.foundation</a>.
