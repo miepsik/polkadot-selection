@@ -52,9 +52,9 @@ checkFlow($step, $_SESSION['user'])?>
                 "Total Stake" => "The total amount of DOT that the validator is staking. 
                 All other criteria being equal, a lower total stake means that your stake has a larger share 
                 and increases your payoff.",
-                "Era Points" => "The total rewards to all validators is distributed based on the 
+                "Avg. Era Points" => "The total rewards to all validators is distributed based on the 
                 relative share of the era points of one validator compared to all other validators. 
-                This should be similar over time but fluctuations could indicate differences in infrastructure and location 
+                Fluctuations in average era points could indicate differences in infrastructure and location 
                 of a validator.",
                 "Cluster Size" => "The number of (known) validators that are operated by the same entity. 
                 A higher number might indicate higher proficiency but could also indicate more centralization 
